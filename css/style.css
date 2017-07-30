@@ -1,0 +1,450 @@
+@font-face {
+  font-family: 'Gagalin';
+  src: url("../../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/ubuntu/ubuntu-b-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/ubuntu/ubuntu-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lifehack';
+  src: url("../../fonts/lifehack_medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  line-height: 1.42;
+  color: #2f3234; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%; }
+
+.visuallyhidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  min-height: 0; }
+
+.section {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.31);
+  min-width: 940px;
+  min-height: 650px; }
+
+.container {
+  width: 940px;
+  min-height: 650px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.header__link_btn {
+  min-width: 6.125rem;
+  padding: 10px 17px;
+  border-radius: 5px;
+  background-color: #e45028;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .header__link_btn:hover {
+    background-color: #ce401a; }
+
+.nav {
+  position: fixed;
+  top: 90px;
+  right: 190px; }
+
+.nav__item {
+  margin-bottom: 10px; }
+
+.nav__link {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: block;
+  border: 1px solid transparent;
+  border-radius: 50%; }
+  .nav__link::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    -webkit-transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 50%; }
+  .nav__link:hover {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s; }
+
+.nav__link_active::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%); }
+
+.product {
+  background: url("../img/background/main_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative; }
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 10px; }
+
+.header__logo {
+  margin-right: auto; }
+
+.header__nav {
+  margin-right: 0.9375rem; }
+
+.header__list {
+  margin: 0;
+  padding: 0; }
+
+.header__item {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .header__item::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+    margin: 0 12px; }
+  .header__item:first-child::before, .header__item:last-child::before {
+    display: none; }
+
+.header__link {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .header__link:hover {
+    color: #f9b43b; }
+
+.product__content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 100px; }
+
+.product__burger,
+.product__text {
+  -webkit-flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.product__burger {
+  padding-right: 10px; }
+
+.product__text {
+  margin-top: 65px; }
+
+.product__text_title {
+  font-family: 'Gagalin';
+  font-weight: 400;
+  font-size: 72px;
+  color: #f9b43b;
+  margin: 0; }
+
+.product__text_subtitle {
+  font-family: 'Lifehack';
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 1;
+  color: #fff; }
+
+.product__arrow-scroll {
+  background: url("../img/icons/arrow-scroll.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 29px;
+  height: 20px; }
+
+.advantages {
+  background: url("../img/background/best_background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.advantages__title {
+  font-family: 'Gagalin';
+  font-weight: 400;
+  font-size: 72px;
+  color: #2f3234;
+  margin: 55px 0; }
+
+.advantages__list {
+  display: inline-block;
+  text-align: center; }
+
+.advantages__item {
+  display: inline-block;
+  width: 310px;
+  vertical-align: top; }
+
+.advantages__pic {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px; }
+
+.advantages__pic_meat {
+  background: url("../img/icons/meat.svg") center no-repeat; }
+
+.advantages__pic_hand {
+  background: url("../img/icons/hand.svg") center no-repeat; }
+
+.advantages__pic_natural {
+  background: url("../img/icons/natural.svg") center no-repeat; }
+
+.advantages__subtitle {
+  font-family: 'Lifehack';
+  font-weight: 500;
+  font-size: 24px;
+  margin: 40px 0 0 0; }
+
+.advantages__text {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+  line-height: 1.8; }
+
+.reviews__item {
+  width: 337px;
+  text-align: center;
+  float: left;
+  position: relative; }
+  .reviews__item:hover .reviews__hover {
+    -webkit-transform: scale(1);
+    -webkit-transition: .7s;
+    opacity: 1; }
+
+.reviews__photo {
+  height: 395px;
+  overflow: hidden;
+  position: relative;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
+
+.reviews__photo_a {
+  position: absolute;
+  top: 205px;
+  -webkit-transform: translate(-50%, -50%) scale(0.9); }
+
+.reviews__photo_b {
+  position: absolute;
+  top: 250px;
+  left: 65px;
+  -webkit-transform: translate(-50%, -50%); }
+
+.reviews__photo_c {
+  position: absolute;
+  top: 270px;
+  left: 145px;
+  -webkit-transform: translate(-50%, -50%) scale(1.5); }
+
+.reviews__photo_d {
+  position: absolute;
+  top: 280px;
+  left: 175px;
+  -webkit-transform: translate(-50%, -50%) scale(1.4); }
+
+.reviews__photo_e {
+  position: absolute;
+  top: 230px;
+  left: 190px;
+  -webkit-transform: translate(-50%, -50%); }
+
+.reviews__photo_f {
+  position: absolute;
+  left: -235px; }
+
+.reviews__photo_g {
+  position: absolute;
+  top: 200px;
+  left: 190px;
+  -webkit-transform: translate(-50%, -50%); }
+
+.reviews__photo_h {
+  position: absolute;
+  top: 215px;
+  left: 100px;
+  -webkit-transform: translate(-50%, -50%); }
+
+.reviews__hover {
+  height: 100%;
+  position: absolute;
+  padding: 50px 34px 50px 20px;
+  text-align: left;
+  color: #fff;
+  top: 0;
+  opacity: 0;
+  background-color: rgba(15, 15, 15, 0.7);
+  -webkit-transform: scale(0.5);
+  -webkit-transition: .5s; }
+
+.reviews__title {
+  font-family: 'Gagalin';
+  font-weight: 400;
+  font-size: 14px;
+  margin: 0; }
+
+.reviews__text {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5rem;
+  margin: 29px 0 0 0; }
+
+.reviews__link {
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 13px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 110px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #2f3234;
+  padding: 8px 15px;
+  margin-top: 15px;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s; }
+  .reviews__link:hover {
+    color: #f9b43b;
+    background-color: #171819; }

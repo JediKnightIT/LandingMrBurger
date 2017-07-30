@@ -1,0 +1,111 @@
+// Стилизация первой страницы
+.product {
+    background: url("../img/background/main_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.header__nav {
+    margin-right: rem(15px);
+}
+
+.header__list {
+    margin: 0;
+    padding: 0;
+}
+
+.header__item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        @include circle(4px,
+        $white);
+        margin: 0 12px;
+    }
+    &:first-child::before,
+    &:last-child::before {
+        display: none;
+    }
+}
+
+.header__link {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 13px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .5s;
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.product__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    margin-bottom: 100px;
+}
+
+.product__burger,
+.product__text {
+    flex-basis: 50%;
+    align-items: center;
+}
+
+.product__burger {
+    padding-right: 10px;
+}
+
+.product__text {
+    margin-top: 65px;
+}
+
+.product__text_title {
+    font-family: 'Gagalin';
+    font-weight: 400;
+    font-size: 72px;
+    color: $yellow;
+    margin: 0;
+}
+
+.product__text_subtitle {
+    font-family: 'Lifehack';
+    font-weight: 500;
+    font-size: 65px;
+    line-height: 1;
+    color: $white;
+}
+
+.product__arrow-scroll {
+    background: url("../img/icons/arrow-scroll.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    width: 29px;
+    height: 20px;
+}

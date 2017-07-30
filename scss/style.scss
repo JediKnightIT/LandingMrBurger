@@ -1,0 +1,15 @@
+// Config
+@import "config/variables.scss";
+@import "config/mixins.scss";
+
+// Layout
+@import "layout/fonts.scss";
+@import "layout/base.scss";
+@import "layout/tuning.scss";
+
+// Sections
+@import "sections/navigation.scss";
+@import "sections/product.scss";
+@import "sections/advantages.scss";
+@import "sections/reviews.scss";
+

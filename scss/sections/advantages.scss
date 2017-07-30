@@ -1,0 +1,60 @@
+// Стилизация страницы Мы лучшие
+.advantages {
+    background: url("../img/background/best_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.advantages__title {
+    font-family: 'Gagalin';
+    font-weight: 400;
+    font-size: 72px;
+    color: $dark;
+    margin: 55px 0;
+}
+
+.advantages__list {
+    display: inline-block;
+    text-align: center;
+}
+
+.advantages__item {
+	display: inline-block;
+	width: 310px;
+	vertical-align: top;
+}
+
+.advantages__pic {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+}
+
+.advantages__pic_meat {
+    background: url("../img/icons/meat.svg") center no-repeat;
+}
+
+.advantages__pic_hand {
+    background: url("../img/icons/hand.svg") center no-repeat;
+}
+
+.advantages__pic_natural{
+    background: url("../img/icons/natural.svg") center no-repeat;
+}
+
+.advantages__subtitle {
+    font-family: 'Lifehack';
+    font-weight: 500;
+	font-size: 24px;
+    margin: 40px 0 0 0;
+}
+
+.advantages__text {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+	font-size: 14px;
+	margin: 10px 0 0 0;
+    line-height: 1.8;
+}

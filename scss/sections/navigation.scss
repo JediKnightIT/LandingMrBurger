@@ -1,0 +1,50 @@
+.nav {
+    position: fixed;
+    top: 90px;
+    right: 190px;
+}
+
+.nav__item {
+    margin-bottom: 10px;
+}
+
+ .nav__link {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    
+    &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        -webkit-transform: translate(-50%, -50%);
+        background-color: $white;
+        border-radius: 50%;
+    }
+   
+    &:hover {
+        border: 1px solid $white;
+        border-radius: 50%;
+        transition: .4s;
+    }
+}
+
+.nav__link_active::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    border: 1px solid $white;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}

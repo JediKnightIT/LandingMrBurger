@@ -1,0 +1,47 @@
+.contacts {
+    position: relative;
+    background: url("../img/background/map_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.footer {
+    position: absolute;
+    top: 91%;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: #101010;
+}
+
+.footer__contacts {
+    margin-top: 10px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__address {
+    @include ubuntu(light);
+    font-size: 14px;
+    color: $white;
+}
+
+.footer__phone {
+    margin-top: 8px;
+    @include ubuntu(bold);
+    font-size: 14px;
+    color: $orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background-image: url("../img/icons/phone.svg");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}

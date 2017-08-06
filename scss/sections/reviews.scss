@@ -1,121 +1,70 @@
 // Стилизация страницы с отзывами
+.reviews__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
 .reviews__item {
-    width: 337px;
-    text-align: center;
-    float: left;
     position: relative;
+    width: 25%;
+    height: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
     
     &:hover .reviews__hover {
-        -webkit-transform: scale(1);
-        -webkit-transition: .7s;
+        transform: scale(1);
+        transition: .8s;
         opacity: 1;
     }
 }
 
-.reviews__photo {
-    height: 395px;
-    overflow: hidden;
-    position: relative;
-    filter: grayscale(1);
-}
-
-.reviews__photo_a {
-    position: absolute;
-    top: 205px;
-    -webkit-transform: translate(-50%, -50%) scale(.9);
-}
-
-.reviews__photo_b {
-    position: absolute;
-    top: 250px;
-    left: 65px;
-    -webkit-transform: translate(-50%, -50%);
-}
-
-.reviews__photo_c {
-    position: absolute;
-    top: 270px;
-    left: 145px;
-    -webkit-transform: translate(-50%, -50%) scale(1.5);
-}
-
-.reviews__photo_d {
-    position: absolute;
-    top: 280px;
-    left: 175px;
-    -webkit-transform: translate(-50%, -50%) scale(1.4);
-}
-
-.reviews__photo_e {
-    position: absolute;
-    top: 230px;
-    left: 190px;
-    -webkit-transform: translate(-50%, -50%);
-}
-
-.reviews__photo_f {
-    position: absolute;
-    left: -235px;
-}
-
-.reviews__photo_g {
-    position: absolute;
-    top: 200px;
-    left: 190px;
-    -webkit-transform: translate(-50%, -50%);
-}
-
-.reviews__photo_h {
-    position: absolute;
-    top: 215px;
-    left: 100px;
-    -webkit-transform: translate(-50%, -50%);
-}
-
 .reviews__hover {
-    height: 100%;
     position: absolute;
-    padding: 50px 34px 50px 20px;
-    text-align: left;
-    color: $white;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px 40px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba($dark, .7);
+    transform: scale(.5);
     opacity: 0;
-    background-color: rgba(15, 15, 15, .7);
-    -webkit-transform: scale(.5);
-    -webkit-transition: .5s;
 }
 
 .reviews__title {
-    font-family: 'Gagalin';
-    font-weight: 400;
+    @include gagalin();
     font-size: 14px;
-    margin: 0;
-}
-.reviews__text {
-    font-family: 'Ubuntu';
-    font-weight: 300;
-    font-size: 14px;
-    line-height: rem(24px);
-    margin: 29px 0 0 0;
-}
-.reviews__link {
-    font-family: 'Ubuntu';
-    font-weight: 500;
-    font-size: 13px;
     color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    width: 110px;
-    height: 35px;
-    border-radius: 5px;
-    background-color: $dark;
+}
+
+.reviews__text {
+    margin: 29px 0 0 0;
+    @include ubuntu(light);
+    font-size: 14px;
+    color: $white;
+    line-height: rem(24px);
+}
+
+.reviews__link {
     padding: 8px 15px;
     margin-top: 15px;
+    @include ubuntu(medium);
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    border-radius: 5px;
+    background-color: $dark;
     transition: .4s;
 
     &:hover {
-        color: $yellow;
         background-color: darken($dark, 10%);
     }
 }

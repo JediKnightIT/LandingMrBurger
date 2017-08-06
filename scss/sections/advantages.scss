@@ -1,5 +1,6 @@
 // Стилизация страницы Мы лучшие
 .advantages {
+    text-align: center;
     background: url("../img/background/best_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,54 +8,37 @@
 }
 
 .advantages__title {
-    font-family: 'Gagalin';
-    font-weight: 400;
+    margin: 55px 0;
+    @include gagalin();
     font-size: 72px;
     color: $dark;
-    margin: 55px 0;
 }
 
 .advantages__list {
-    display: inline-block;
-    text-align: center;
+    display: flex;
 }
 
 .advantages__item {
-	display: inline-block;
-	width: 310px;
-	vertical-align: top;
+    margin: 0 35px;
+    flex: 1;
 }
 
-.advantages__pic {
-    display: inline-block;
-    vertical-align: middle;
-    width: 100px;
-    height: 100px;
-}
-
-.advantages__pic_meat {
-    background: url("../img/icons/meat.svg") center no-repeat;
-}
-
-.advantages__pic_hand {
-    background: url("../img/icons/hand.svg") center no-repeat;
-}
-
-.advantages__pic_natural{
-    background: url("../img/icons/natural.svg") center no-repeat;
-}
-
+// для div оборачивающий svg
+// .advantages__pic {
+//     height: 90px;
+// }
+// .advantages__icon {
+//     height: 90px;
+// }
 .advantages__subtitle {
-    font-family: 'Lifehack';
-    font-weight: 500;
-	font-size: 24px;
     margin: 40px 0 0 0;
+    @include lifehack();
+    font-size: 24px;
 }
 
 .advantages__text {
-    font-family: 'Ubuntu';
-    font-weight: 300;
-	font-size: 14px;
-	margin: 10px 0 0 0;
+    margin: 10px 0 0 0;
+    @include ubuntu(light);
+    font-size: 14px;
     line-height: 1.8;
 }

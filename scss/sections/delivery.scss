@@ -1,0 +1,190 @@
+.delivery {
+    position: relative;
+    background: url("../img/background/delivery_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.delivery__title {
+    margin-bottom: 60px;
+    @include gagalin();
+    font-size: 72px;
+    color: $yellow;
+}
+
+.delivery__form {
+    display: flex;
+}
+
+.delivery__form-left,
+.delivery__form-right {
+    min-width: 50%;
+}
+
+.delivery__form-row {
+    display: flex;
+}
+
+.delivery__label {
+    margin-left: 20px;
+}
+
+.delivery__label-first {
+    width: 50%;
+}
+
+.delivery__label-second {
+    width: 100%;
+}
+
+.delivery__label-third {
+    width: 25%;
+}
+
+.delivery__form-title {
+    margin-top: 20px;
+    @include ubuntu(light);
+    font-size: 14px;
+    color: $white;
+}
+
+.delivery__form-input,
+.delivery__form-textarea {
+    padding: 14px;
+    margin-top: 7px;
+    flex: 1;
+    width: 100%;
+    @include ubuntu(light);
+    font-size: 14px;
+    color: $dark;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    
+    &:focus {
+        border-color: $yellow;
+        outline: none;
+    }
+}
+
+.delivery__form-input {
+    height: 35px;
+}
+
+.delivery__label-textarea {
+    width: 100%;
+}
+
+.delivery__form-textarea {
+    height: 116px;
+    resize: none;
+}
+
+.delivery__form-radio,
+.delivery__btns,
+.delivery__check {
+    display: flex;
+    align-items: center;
+}
+
+.delivery__form-radio {
+    margin-top: 15px;
+}
+
+.delivery__control-choise {
+    display: none;
+}
+
+.delivery__control-choise:checked+.delivery__btns-fake {
+    border: 1px solid $orange;
+}
+
+.delivery__control-choise:checked+.delivery__btns-fake::after {
+    display: block;
+}
+
+.delivery__control-choise:checked+.delivery__btns-fake+.delivery__btns-text {
+    color: $orange;
+}
+
+.delivery__btns-fake {
+    position: relative;
+    margin: 0 10px 0 20px;
+    width: 15px;
+    height: 15px;
+    background-color: $white;
+    border-radius: 50%;
+}
+
+.delivery__btns-fake::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    display: none;
+    width: 7px;
+    height: 7px;
+    background-color: $orange;
+    border-radius: 50%;
+}
+
+.delivery__btns-text,
+.delivery__check-text {
+    @include ubuntu(light);
+    font-size: 14px;
+    color: $white;
+}
+
+.delivery__check {
+    margin-top: 24px;
+}
+
+.delivery__control-choise:checked+.delivery__check-fake::after {
+    display: block;
+}
+
+.delivery__control-choise:checked+.delivery__check-fake+.delivery__check-text {
+    color: $orange;
+}
+
+.delivery__check-fake {
+    margin: 0 10px 0 20px;
+    width: 15px;
+    height: 15px;
+    background-color: $white;
+}
+
+.delivery__check-fake::after {
+    content: "";
+    margin: 1px 4px;
+    display: none;
+    width: 6px;
+    height: 11px;
+    border: 0 solid $orange;
+    border-width: 0 3px 3px 0;
+    transform: rotateZ(45deg);
+}
+
+.delivery__control-choise:checked+.delivery__check-fake::after {
+    display: block;
+}
+
+.delivery__send {
+    margin: 25px 0 0 241px;
+}
+
+.delivery__btn {
+    min-width: rem(98px);
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    @include ubuntu(medium);
+    font-size: 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: .5s;
+
+    &:hover {
+        background-color: $orange;
+    }
+}

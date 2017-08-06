@@ -1,0 +1,112 @@
+// Стилизация страницы Команда
+.team {
+    position: relative;
+    background: url("../img/background/team_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.team__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 78px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background: rgba($dark, 0.93);
+}
+
+.team__title {
+    padding-top: 89px;
+    padding-bottom: 80px;
+    color: $yellow;
+    display: flex;
+    align-items: center;
+    @include gagalin();
+    font-size: 72px;
+    line-height: 1;
+}
+
+.team__item {
+    
+    &.active {
+        .team__container {
+            height: auto;
+        }
+        .team__name {
+            color: $yellow;
+
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.team__name {
+    padding-top: 35px;
+    display: flex;
+    align-items: center;
+    @include gagalin();
+    font-size: 14px;
+    color: $white;
+
+    &::before {
+        content: "";
+        margin-right: 10px;
+        width: 0;
+        height: 0;
+        border: 8px solid transparent;
+        border-top-color: $yellow;
+        border-bottom: none;
+    }
+}
+
+.team__container {
+    margin-top: 17px;
+    display: flex;
+    overflow: hidden;
+    height: 0;
+}
+
+.team__photo {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.team__img {
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.team__about {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 223px;
+    height: 98px;
+}
+
+.team__specialty {
+    @include ubuntu(bold);
+    font-size: 14px;
+    color: $white;
+}
+
+.team__text {
+    margin: 0;
+    padding-top: 10px;
+    @include ubuntu(light);
+    font-size: 14px;
+    color: $white;
+    line-height: 1.7;
+}

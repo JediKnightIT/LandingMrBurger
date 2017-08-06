@@ -1,0 +1,48 @@
+// Стилизация страницы Меню
+.menu {
+    position: relative;
+    background: url("../img/background/menu_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.menu__title,
+.menu__subtitle {
+    @include gagalin();
+    color: $white;
+}
+
+.menu__title {
+    font-size: 72px;
+}
+
+.menu__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.menu__item {
+    height: 100%;
+}
+
+.menu__subtitle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 650px;
+    height: 80px;
+    font-size: 40px;
+    transform: rotate(-90deg);
+}
+
+// .menu__accordeon {
+//     width: 540px;
+//     height: 650px;
+// }
+// .menu__text {
+//     padding: 60px 35px 360px 33px;
+// }

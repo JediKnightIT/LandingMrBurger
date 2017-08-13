@@ -7,19 +7,39 @@
 }
 
 .delivery__title {
-    margin-bottom: 60px;
+    margin-bottom: rem(60px);
     @include gagalin();
-    font-size: 72px;
+    font-size: rem(72px);
     color: $yellow;
+    text-align: center;
+
+    @include phones() {
+        margin-bottom: 0;
+        padding: 0 rem(32px);
+        font-size: rem(50px);      
+    }
 }
 
 .delivery__form {
     display: flex;
+
+    @include tablets() {
+        flex-wrap: wrap;
+        width: 70%;
+    }
+
+    @include phones() {
+        width: 100%;        
+    }
 }
 
 .delivery__form-left,
 .delivery__form-right {
     min-width: 50%;
+
+    @include tablets() {
+        width: 100%;
+    } 
 }
 
 .delivery__form-row {
@@ -27,7 +47,13 @@
 }
 
 .delivery__label {
-    margin-left: 20px;
+    margin-left: rem(20px);
+
+    @include phones() {
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }
 
 .delivery__label-first {
@@ -43,23 +69,23 @@
 }
 
 .delivery__form-title {
-    margin-top: 20px;
+    margin-top: rem(20px);
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 }
 
 .delivery__form-input,
 .delivery__form-textarea {
-    padding: 14px;
-    margin-top: 7px;
+    padding: rem(14px);
+    margin-top: rem(7px);
     flex: 1;
     width: 100%;
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $dark;
-    border-radius: 5px;
-    border: 2px solid transparent;
+    border-radius: rem(5px);
+    border: rem(2px) solid transparent;
     
     &:focus {
         border-color: $yellow;
@@ -68,7 +94,7 @@
 }
 
 .delivery__form-input {
-    height: 35px;
+    height: rem(35px);
 }
 
 .delivery__label-textarea {
@@ -76,7 +102,7 @@
 }
 
 .delivery__form-textarea {
-    height: 116px;
+    height: rem(116px);
     resize: none;
 }
 
@@ -85,10 +111,18 @@
 .delivery__check {
     display: flex;
     align-items: center;
+
+    @include phones() {
+        justify-content: center;
+    } 
 }
 
 .delivery__form-radio {
-    margin-top: 15px;
+    margin-top: rem(15px);
+
+    @include phones() {
+        margin-top: rem(35px);
+    } 
 }
 
 .delivery__control-choise {
@@ -96,7 +130,7 @@
 }
 
 .delivery__control-choise:checked+.delivery__btns-fake {
-    border: 1px solid $orange;
+    border: rem(1px) solid $orange;
 }
 
 .delivery__control-choise:checked+.delivery__btns-fake::after {
@@ -109,9 +143,9 @@
 
 .delivery__btns-fake {
     position: relative;
-    margin: 0 10px 0 20px;
-    width: 15px;
-    height: 15px;
+    margin: 0 rem(10px) 0 rem(20px);
+    width: rem(15px);
+    height: rem(15px);
     background-color: $white;
     border-radius: 50%;
 }
@@ -119,11 +153,11 @@
 .delivery__btns-fake::after {
     content: "";
     position: absolute;
-    top: 3px;
-    left: 3px;
+    top: rem(3px);
+    left: rem(3px);
     display: none;
-    width: 7px;
-    height: 7px;
+    width: rem(7px);
+    height: rem(7px);
     background-color: $orange;
     border-radius: 50%;
 }
@@ -131,12 +165,16 @@
 .delivery__btns-text,
 .delivery__check-text {
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 }
 
 .delivery__check {
-    margin-top: 24px;
+    margin-top: rem(24px);
+
+    @include phones() {
+        margin-top: rem(35px);
+    } 
 }
 
 .delivery__control-choise:checked+.delivery__check-fake::after {
@@ -148,20 +186,20 @@
 }
 
 .delivery__check-fake {
-    margin: 0 10px 0 20px;
-    width: 15px;
-    height: 15px;
+    margin: 0 rem(10px) 0 rem(20px);
+    width: rem(15px);
+    height: rem(15px);
     background-color: $white;
 }
 
 .delivery__check-fake::after {
     content: "";
-    margin: 1px 4px;
+    margin: rem(1px) rem(4px);
     display: none;
-    width: 6px;
-    height: 11px;
+    width: rem(6px);
+    height: rem(11px);
     border: 0 solid $orange;
-    border-width: 0 3px 3px 0;
+    border-width: 0 rem(3px) rem(3px) 0;
     transform: rotateZ(45deg);
 }
 
@@ -170,18 +208,26 @@
 }
 
 .delivery__send {
-    margin: 25px 0 0 241px;
+    margin: rem(25px) 0 0 rem(241px);
+
+    @include tablets() {
+        margin-left: rem(-295px);
+    }
+
+    @include phones() {
+        margin-left: rem(23px);
+    }
 }
 
 .delivery__btn {
     min-width: rem(98px);
-    padding: 10px 15px;
+    padding: rem(10px) rem(15px);
     color: #fff;
     text-decoration: none;
     @include ubuntu(medium);
-    font-size: 13px;
+    font-size: rem(13px);
     text-transform: uppercase;
-    border-radius: 5px;
+    border-radius: rem(5px);
     transition: .5s;
 
     &:hover {

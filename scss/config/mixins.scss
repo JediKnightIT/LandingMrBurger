@@ -6,11 +6,6 @@
     background-color: $color;
 }
 
-//перевод в rem
-@function rem($px) {
-    @return $px / 16px+0rem;
-}
-
 // Шрифты
 @mixin gagalin() {
     font-family: 'Gagalin', Helvetica, sans-serif;
@@ -40,4 +35,10 @@
 @mixin lifehack() {
     font-family: 'Lifehack';
     font-weight: 500;
+}
+
+@mixin cover(){
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }

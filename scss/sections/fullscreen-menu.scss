@@ -1,0 +1,39 @@
+.fullscreen-menu {
+    display: none;
+
+    @include tablets() {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding: rem(274px) rem(269px) 0 rem(269px);
+        display: none;
+        justify-content: center;
+        background-color: rgba($dark, .99);
+        z-index: 1000;
+    }
+}
+
+.fullscreen-menu__item {
+    text-align: center;
+
+    &::before {
+        content: "";
+        margin: rem(25px) rem(110px);
+        display: block;
+        @include circle(rem(7px), $white);
+    }
+
+    &:first-child::before {
+        display: none;
+    }
+}
+
+.fullscreen-menu__link {
+    @include ubuntu(regular);
+    font-size: rem(24px);
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}

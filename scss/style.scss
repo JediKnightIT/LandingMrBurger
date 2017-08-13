@@ -1,4 +1,11 @@
+// Resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
 // Config
+@import "config/media.scss";
 @import "config/variables.scss";
 @import "config/mixins.scss";
 
@@ -8,7 +15,10 @@
 @import "layout/tuning.scss";
 
 // Sections
+@import "sections/fullscreen-menu.scss";
+@import "sections/header.scss";
 @import "sections/product.scss";
+@import "sections/hamburger-menu.scss";
 @import "sections/advantages.scss";
 @import "sections/burgers.scss";
 @import "sections/team.scss";
@@ -16,5 +26,7 @@
 @import "sections/reviews.scss";
 @import "sections/delivery.scss";
 @import "sections/contacts.scss";
+@import "sections/footer.scss";
+@import "sections/svg.scss";
 @import "sections/navigation.scss";
 

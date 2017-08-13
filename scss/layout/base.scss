@@ -1,3 +1,18 @@
+html {
+  @include tablets {
+    font-size: rem(15px);
+  }
+
+  @include phones {
+    font-size: rem(13px);
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,27 +21,18 @@ body {
   color: $dark;
 }
 
-.clearfix::after {
-	content: "";
-	display: block;
-	clear: both;
-}
 
 *, *::before, *::after { 
   box-sizing: border-box; 
-}
-
-body, html {
-  height: 100%;
 }
 
 // Скрытие элементов
 .visuallyhidden:not(:focus):not(:active) {
   position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: rem(1px);
+  height: rem(1px);
+  margin: rem(-1px);
   border: 0;
   padding: 0;
 
@@ -48,6 +54,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }

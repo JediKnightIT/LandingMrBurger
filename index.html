@@ -13,9 +13,19 @@
 <body>
 	<div class="wrapper">
 		<div class="maincontent">
+			<nav class="fullscreen-menu">
+				<ul class="fullscreen-menu__list">
+					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Почему мы</a></li>
+					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Меню</a></li>
+					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Советы</a></li>
+					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Кто мы</a></li>
+					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a></li>
+					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Контакты</a></li>
+				</ul>
+			</nav>
 			<!-- Главная секция -->
 			<section class="section product">
-				<div class="container product__container">
+				<div class="container">
 					<header class="header">
 						<a href="index.html" class="header__logo">
 							<img src="img/icons/logo.svg" alt="Бургеры Mr.Burger">
@@ -40,21 +50,26 @@
 								<li class="header__item">
 									<a href="#" class="header__link">Контакты</a>
 								</li>
-								<li class="header__item">
-									<a href="#" class="header__link btn">Заказать</a>
-								</li>
 							</ul>
 						</nav>
+						<a href="#" class="btn">Заказать</a>
+						<a class="header-hamburger__link" href="#">
+							<div class="header-hamburger__link-menu"></div>
+						</a>
 					</header>
 					<div class="product__content">
-						<img src="img/content/burger.png" alt="Бургер" class="product__burger">
+						<img class="product__burger" src="img/burgers/main_burger.png" alt="Бургер">
 						<div class="product__text">
 							<h1 class="product__text_title">Мы делаем</h1>
 							<span class="product__text_subtitle">натуральные бургеры</span>
 						</div>
 					</div>
-					<a class="product__arrow-scroll"></a>
 				</div>
+				<a class="product__link">
+					<svg class="product__arrow-scroll">
+						<use xlink:href="./img/icons/sprite/sprite.svg#arrow-scroll"></use>
+					</svg>
+				</a>
 			</section>
 			<!-- Секция преимуществ -->
 			<section class="section advantages">
@@ -62,29 +77,128 @@
 					<h1 class="advantages__title">Мы лучшие</h1>
 					<ul class="advantages__list">
 						<li class="advantages__item">
-							<!-- Оборачивать svg в div или нет? -->
-							<!-- <svg class="advantages__icon">
-								<use xlink:href="img/sprite/sprite.svg#meat"></use>
-							</svg> -->
-							<img src="img/icons/meat.svg" alt="Мясо">
-							<h3 class="advantages__subtitle">100% свежее мясо</h3>
-							<p class="advantages__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+							<svg class="advantages__icon meat">
+								<use xlink:href="./img/icons/sprite/sprite.svg#meat"></use>
+							</svg>
+							<div class="advantages__container">
+								<h3 class="advantages__subtitle">100% свежее мясо</h3>
+								<p class="advantages__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+							</div>
 						</li>
 						<li class="advantages__item">
-							<img src="img/icons/hand.svg" alt="Рука">							
-							<h3 class="advantages__subtitle">Ручная сборка</h3>
-							<p class="advantages__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный
-								реформаторский пафос.</p>
+							<svg class="advantages__icon hand">
+								<use xlink:href="./img/icons/sprite/sprite.svg#hand"></use>
+							</svg>
+							<div class="advantages__container">
+								<h3 class="advantages__subtitle">Ручная сборка</h3>
+								<p class="advantages__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный
+									реформаторский пафос.</p>
+							</div>
 						</li>
 						<li class="advantages__item">
-							<img src="img/icons/natural.svg" alt="Листья">							
-							<h3 class="advantages__subtitle">Натуральные ингредиенты</h3>
-							<p class="advantages__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+							<svg class="advantages__icon natural">
+								<use xlink:href="./img/icons/sprite/sprite.svg#natural"></use>
+							</svg>
+							<div class="advantages__container">
+								<h3 class="advantages__subtitle">Натуральные ингредиенты</h3>
+								<p class="advantages__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+							</div>
 						</li>
 					</ul>
 				</div>
 			</section>
-			<section class="section burgers"></section>
+			<!-- Секция с бургерами -->
+			<section class="section burgers">
+				<div class="container">
+					<a href="#" class="burgers__slider-left">
+						<svg class="burgers__slider-btn">
+							<use xlink:href="./img/icons/sprite/sprite.svg#arrow-scroll"></use>
+						</svg>
+					</a>
+					<div class="burgers__assortment">
+						<div class="burgers__container-left">
+							<div class="burgers__composition">
+								<a class="burgers__link" href="#">
+									<svg class="burgers__composition-icon">
+										<use xlink:href="./img/icons/sprite/sprite.svg#burger"></use>
+									</svg>
+									<span class="burgers__composition-text">состав</span>
+								</a>
+								<ul class="burgers__list">
+									<li class="burgers__item">
+										<svg class="burgers__item-icon beef">
+											<use xlink:href="./img/icons/sprite/sprite.svg#beef"></use>
+										</svg>
+										<span class="burgers__item-text">Говядина</span>
+										<span class="burgers__item-weight">300 г</span>
+									</li>
+									<li class="burgers__item">
+										<svg class="burgers__item-icon buns">
+											<use xlink:href="./img/icons/sprite/sprite.svg#buns"></use>
+										</svg>
+										<span class="burgers__item-text">Булочки</span>
+										<span class="burgers__item-weight">100 г</span>
+									</li>
+									<li class="burgers__item">
+										<svg class="burgers__item-icon salad">
+											<use xlink:href="./img/icons/sprite/sprite.svg#salad"></use>
+										</svg>
+										<span class="burgers__item-text">Зелень</span>
+										<span class="burgers__item-weight">70 г</span>
+									</li>
+									<li class="burgers__item">
+										<svg class="burgers__item-icon sauce">
+											<use xlink:href="./img/icons/sprite/sprite.svg#sauce"></use>
+										</svg>
+										<span class="burgers__item-text">Соус</span>
+										<span class="burgers__item-weight">150 г</span>
+									</li>
+									<li class="burgers__item">
+										<svg class="burgers__item-icon cucumber">
+											<use xlink:href="./img/icons/sprite/sprite.svg#cucumber"></use>
+										</svg>
+										<span class="burgers__item-text">Овощи</span>
+										<span class="burgers__item-weight">200 г</span>
+									</li>
+									<li class="burgers__item">
+										<svg class="burgers__item-icon cheese">
+											<use xlink:href="./img/icons/sprite/sprite.svg#cheese"></use>
+										</svg>
+										<span class="burgers__item-text">Сыр</span>
+										<span class="burgers__item-weight">80 г</span>
+									</li>
+								</ul>
+							</div>
+							<img class="burgers__img" src="img/burgers/black_burger.png" alt="Чёрный бургер">
+							<div class="burgers__calories">
+								<svg class="burgers__calories-quantity">
+									<use xlink:href="./img/icons/sprite/sprite.svg#kkal"></use>
+								</svg>
+								<span class="burgers__calories-number">1200</span>
+								<span class="burgers__calories-text">ккал</span>
+							</div>
+						</div>
+						<div class="burgers__container-right">
+							<h1 class="burgers__name">Dark Beef Burger</h1>
+							<p class="burgers__text">
+								Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+								луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+							</p>
+							<div class="burgers__delivery">
+								<span class="burgers__price">500</span>
+								<span class="burgers__currency">рублей</span>
+								<a href="#" class="btn">Заказать</a>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="burgers__slider-right">
+						<svg class="burgers__slider-btn">
+							<use xlink:href="./img/icons/sprite/sprite.svg#arrow-scroll"></use>
+						</svg>
+					</a>
+				</div>
+			</section>
+			<!-- Секция команда -->
 			<section class="section team">
 				<div class="team__content">
 					<h1 class="team__title">Команда</h1>
@@ -140,13 +254,39 @@
 					</ul>
 				</div>
 			</section>
-			<!-- Секция Меню-->
+			<!-- Секция меню<-->
 			<section class="section menu">
 				<h1 class="menu__title">Меню</h1>
 				<ul class="menu__list">
+					<li class="menu__item active">
+						<div class="menu__container menu__container_meat">
+							<span class="menu__subtitle menu__subtitle_meat">Для мясоедов</span>
+						</div>
+						<div class="menu__accordeon">
+							<p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+								сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+								слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+								выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+								механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться
+								к слову.</p>
+						</div>
+					</li>
 					<li class="menu__item">
-						<div class="menu__container">
-							<h2 class="menu__subtitle">Для мясоедов</h2>
+						<div class="menu__container menu__container_vegetarian">
+							<span class="menu__subtitle menu__subtitle_vegetarian">Вегетарианское</span>
+						</div>
+						<div class="menu__accordeon">
+							<p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
+								сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к
+								слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно
+								выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
+								механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться
+								к слову.</p>
+						</div>
+					</li>
+					<li class="menu__item">
+						<div class="menu__container menu__container_dietary">
+							<span class="menu__subtitle menu__subtitle_dietary">Диетическое</span>
 						</div>
 						<div class="menu__accordeon">
 							<p class="menu__text">Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм
@@ -159,10 +299,10 @@
 					</li>
 				</ul>
 			</section>
-			<!-- Секция Отзывы-->
+			<!-- Секция отзывы-->
 			<section class="section reviews">
 				<ul class="reviews__list">
-					<li class="reviews__item" style="background-image: url('img/reviews/review_a.jpg')">
+					<li class="reviews__item" style="background-image: url('/img/reviews/review_a.jpg')">
 						<div class="reviews__hover">
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
@@ -228,6 +368,7 @@
 					</li>
 				</ul>
 			</section>
+			<!-- Секция доставки -->
 			<section class="section delivery">
 				<div class="container">
 					<h1 class="delivery__title">Закажите доставку</h1>
@@ -304,29 +445,49 @@
 					</div>
 				</div>
 			</section>
+			<!-- Секция контактной информации -->
 			<section class="section contacts">
 				<footer class="footer">
-					<div class="footer__contacts">
-						<span class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</span>
-						<a class="footer__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
-					</div>
-					<div class="footer__socials">
-						<ul class="footer__list">
-							<li class="footer__item">
-								<a class="footer__link" href="https://vk.com" target="blank">
-									<svg class="footer__icon"></svg>
-								</a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="https://www.facebook.com" target="blank"></a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="https://instagram.com" target="blank"></a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="https://twitter.com" target="blank"></a>
-							</li>
-						</ul>
+					<div class="container footer__container">
+						<div class="footer__contacts">
+							<div class="footer__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+							<svg class="footer__icon">
+								<use xlink:href="./img/icons/sprite/sprite.svg#phone"></use>
+							</svg>
+							<a class="footer__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
+						</div>
+						<div class="footer__socials">
+							<ul class="footer__list">
+								<li class="footer__item">
+									<a class="footer__link" href="https://vk.com" target="blank">
+										<svg class="footer__socials-icon">
+											<use xlink:href="./img/icons/sprite/sprite.svg#vk"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="https://www.facebook.com" target="blank">
+										<svg class="footer__socials-icon">
+											<use xlink:href="./img/icons/sprite/sprite.svg#fb"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="https://instagram.com" target="blank">
+										<svg class="footer__socials-icon">
+											<use xlink:href="./img/icons/sprite/sprite.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="footer__item">
+									<a class="footer__link" href="https://twitter.com" target="blank">
+										<svg class="footer__socials-icon">
+											<use xlink:href="./img/icons/sprite/sprite.svg#tw"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</footer>
 			</section>

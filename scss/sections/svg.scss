@@ -1,0 +1,85 @@
+// Стилизация svg
+.product__arrow-scroll,
+.burgers__slider-btn {
+    width: rem(32px);
+    height: rem(20px);
+    fill: $white;
+    transition: .2s;
+}
+
+.advantages__icon {
+    width: rem(100px);
+    height: rem(90px);
+}
+
+.meat {
+    fill: $orange;
+}
+
+.hand {
+    fill: $yellow;    
+}
+
+.natural {
+    fill: $green;    
+}
+
+.burgers__composition-icon {
+    width: rem(45px);
+    height: rem(45px);
+    fill: $white;    
+}
+
+.burgers__item-icon {
+    width: rem(45px);
+    height: rem(45px);
+}
+
+.beef {
+    fill: $orange;
+}
+
+.buns {
+    fill: $yellow;
+}
+
+.salad {
+    fill: $green;    
+}
+
+.sauce{
+    fill: $orange;
+}
+
+.cucumber {
+    fill: $green;    
+}
+
+.cheese{
+    fill: $yellow;
+}
+
+.burgers__calories-quantity {
+    width: rem(60px);
+    height: rem(60px);
+    fill: $white;
+}
+
+.footer__icon {
+    width: rem(11px);
+    height: rem(11px);
+    fill: $orange;
+}
+
+.footer__socials-icon {
+    margin-left: rem(20px);
+    width: rem(20px);
+    height: rem(20px);
+    fill: #585858;
+    transition: .4s;
+
+    &:hover {
+        fill: #fff;
+        transition: .4s;
+    }
+}

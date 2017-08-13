@@ -8,37 +8,58 @@
 }
 
 .advantages__title {
-    margin: 55px 0;
+    margin: 0 0 rem(60px) 0;
     @include gagalin();
-    font-size: 72px;
+    font-size: rem(72px);
     color: $dark;
+
+    @include phones() {
+        margin: 0 0 rem(40px) 0;       
+        font-size: rem(50px);        
+    }
 }
 
 .advantages__list {
     display: flex;
+
+    @include phones() {
+        flex-direction: column;
+    }
 }
 
 .advantages__item {
-    margin: 0 35px;
+    margin: 0 rem(14px);
     flex: 1;
+
+    &:hover .advantages__icon {
+        transform: scale(1.2);
+        transition: .3s;
+    }
+
+    @include phones() {
+        display: flex;
+        align-items: center;
+    }  
 }
 
-// для div оборачивающий svg
-// .advantages__pic {
-//     height: 90px;
-// }
-// .advantages__icon {
-//     height: 90px;
-// }
+.advantages__container {
+    @include phones() {
+        margin-left: 30px;
+        width: 65%;
+        text-align: left;
+    }  
+}
+
 .advantages__subtitle {
-    margin: 40px 0 0 0;
+    margin: rem(40px) 0 0 0;
     @include lifehack();
-    font-size: 24px;
+    font-size: rem(24px);
 }
 
 .advantages__text {
-    margin: 10px 0 0 0;
+    margin: rem(10px) 0 0 0;
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.8;
+    color: #6a6969;
 }

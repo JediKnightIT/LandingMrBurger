@@ -1,6 +1,7 @@
 // Стилизация страницы Меню
 .menu {
     position: relative;
+    display: flex;    
     background: url("../img/background/menu_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -14,7 +15,14 @@
 }
 
 .menu__title {
-    font-size: 72px;
+    position: absolute;
+    top: rem(111px);
+    left: rem(95px);
+    font-size: rem(72px);
+
+    @include phones() {   
+        font-size: rem(50px);        
+    }
 }
 
 .menu__list {
@@ -22,27 +30,101 @@
     top: 0;
     right: 0;
     bottom: 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .menu__item {
+    display: flex;
     height: 100%;
+
+    // &.active .menu__accordeon {
+    //     display: block;
+    // }
+
+    // &.active .menu__subtitle {
+    //     bottom: rem(335px);
+    //     color: $yellow;
+    // }
+}
+
+.menu__container {
+    position: relative;
+    height: 100%;
+    width: rem(80px);
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.menu__container_meat {
+    background-image: url("../img/menu/meat.jpg");
+    background-position: 77% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu__container_vegetarian {
+    background-image: url("../img/menu/vegetarian.jpg");
+    background-position: 90% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.menu__container_dietary {
+    background-image: url("../img/menu/dietary.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .menu__subtitle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 650px;
-    height: 80px;
-    font-size: 40px;
+    display: flex;
+    white-space: nowrap;
+    font-size: rem(40px);
     transform: rotate(-90deg);
+
+    &:hover {
+        color: $yellow;        
+        transition: .4s;
+    }
 }
 
-// .menu__accordeon {
-//     width: 540px;
-//     height: 650px;
-// }
-// .menu__text {
-//     padding: 60px 35px 360px 33px;
-// }
+.menu__subtitle_meat {
+    position: absolute;
+    left: rem(-92px);
+    bottom: rem(144px);
+}
+
+.menu__subtitle_vegetarian {
+    position: absolute;
+    left: rem(-104px);
+    bottom: rem(158px);
+}
+
+.menu__subtitle_dietary {
+    position: absolute;
+    left: rem(-77px);
+    bottom: rem(131px);
+}
+
+.menu__accordeon {
+    padding: rem(60px) rem(37px) 0 rem(35px);
+    display: none;
+    width: rem(540px);
+    min-height: rem(650px);
+    background-color: rgba($dark, 0.93);
+}
+
+.menu__text {
+    margin: 0;
+    @include ubuntu(light);
+    font-size: rem(14px);
+    color: $white;
+    line-height: 2;  
+}

@@ -1,3 +1,187 @@
 .burgers {
-      background: linear-gradient(180deg,#f9b43b 0, #f3a43a 30%, #eb8c38 40%,#eb8c38 60%, #f3a43a 70%,#f9b43b 100%);
+    background: linear-gradient(180deg,#f9b43b 0, #f3a43a 30%, #eb8c38 40%,#eb8c38 60%, #f3a43a 70%,#f9b43b 100%);
+
+    @include tablets() {
+        height: 100%;
+    }    
+}
+
+.burgers__slider-left {
+    position: absolute;
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.burgers__assortment {
+    display: flex;
+    width: 100%;
+
+    @include tablets() {
+        margin-top: rem(130px);
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.burgers__container-left {
+    position: relative;
+}
+
+.burgers__composition {
+    position: absolute;
+    margin-left: rem(50px);
+    display: flex;
+
+    @include phones() {
+        margin-left: 0;
+    }
+}
+
+.burgers__link {
+    padding: rem(10px) rem(22px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgba($orange, .4);
+    border-radius: rem(5px);
+    transition: .4s;  
+    
+
+    &:hover {
+        background-color: rgba($orange, 1);
+        transition: .4s;  
+    }
+}
+
+.burgers__composition-text {
+    margin-top: rem(5px);
+    @include gagalin();
+    font-size: rem(14px);
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.burgers__list {
+    padding: rem(20px);
+    background-color: rgba($white, .9);
+    border-radius: rem(5px);
+    display: none; 
+}
+
+.burgers__item {
+    display: flex;
+    align-items: center;
+}
+
+.burgers__img {
+    padding: rem(75px) 0 0 rem(30px);
+
+    @include phones() {
+        padding: rem(75px) 0 0 0;        
+        width: 100%;
+    }
+}
+
+.burgers__calories {
+    position: absolute;
+    left: rem(50px);
+    display: flex;
+    flex-direction: column;
+    opacity: .5;
+
+    @include tablets() {
+        top: 0;
+        left: rem(490px);
+    }
+}
+
+.burgers__calories-number,
+.burgers__calories-text {
+    text-align: center;
+    @include gagalin();
+    color: $white;
+    line-height: 1.6;
+}
+
+.burgers__calories-number {
+    position: absolute;
+    top: rem(25px);
+    left: rem(14px);
+    font-size: rem(20px);
+}
+
+.burgers__calories-text {
+    font-size: rem(14px);
+}
+
+.burgers__container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    @include tablets() {
+        align-items: center;
+    }
+}
+
+.burgers__name {
+    @include gagalin();
+    font-size: rem(72px);
+    color: $white;
+    line-height: 1;
+
+    @include tablets() {
+        margin-top: rem(50px);
+        text-align: center;
+    }
+
+    @include tablets() {
+        margin-top: rem(30px);
+    }
+}
+
+.burgers__text {
+    @include ubuntu(light);
+    font-size: rem(14px);
+    color: $white;
+    line-height: 1.7;
+
+    @include tablets() {
+        margin-top: rem(30px);        
+        width: 75%;
+        text-align: center;
+    }
+
+    @include tablets() {
+        margin-top: rem(30px);
+    }
+}
+
+.burgers__delivery {
+    @include tablets() {
+        margin-top: rem(45px);        
+    }
+
+    @include tablets() {
+        margin-top: rem(15px);
+    }
+}
+
+.burgers__price {
+    @include gagalin();
+    font-size: rem(72px);
+    color: $orange;
+}
+
+.burgers__currency {
+    margin-right: rem(20px);
+    @include gagalin();
+    font-size: rem(30px);
+    color: $orange; 
+}
+.burgers__slider-right {
+    position: absolute;
+    right: rem(-50px);
+    transform: rotate(-90deg);
 }

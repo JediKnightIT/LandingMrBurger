@@ -7,66 +7,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-}
-
-.product__container {
-    height: 80%;
-}
-
-.header {
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.header__logo {
-    margin-right: auto;
-}
-
-.header__nav {
-    margin-right: rem(15px);
-}
-
-.header__list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.header__item {
-    display: flex;
-    align-items: center;
-    
-    &::before {
-        content: "";
-        margin: 0 15px;
-        display: block;
-        @include circle(4px,
-        $white);
-    }
-
-    &:first-child::before,
-    &:last-child::before {
-        display: none;
-    }
-}
-
-.header__link {
-    display: inline-block;
-    vertical-align: middle;
-    @include ubuntu(medium);
-    font-size: 13px;
-    color: $white;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: .5s;
-
-    &:hover {
-        color: $yellow;
-    }
+    height: 100%;
 }
 
 .product__content {
@@ -74,7 +15,11 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+
+    @include tablets() {
+        flex-flow: row wrap;
+        margin-top:rem(54px);
+    }
 }
 
 .product__burger,
@@ -84,33 +29,68 @@
 }
 
 .product__burger {
-    padding-right: 10px;
+    padding-right: rem(10px);
+    width: 70%;    
+
+    @include tablets() {
+        padding-right: 0;
+    }
 }
 
 .product__text {
-    margin-top: 65px;
+    margin-top: rem(65px);
+
+    @include tablets() {
+        margin: 0;
+        text-align: center;
+    }
 }
 
 .product__text_title {
     margin: 0;
     @include gagalin();
-    font-size: 72px;
+    font-size: rem(72px);
     color: $yellow;
+    
+    @include tablets() {
+        margin-top: rem(30px);
+    }
+
+    @include phones() {
+        font-size: rem(63px);
+    }
 }
 
 .product__text_subtitle {
     @include lifehack();
-    font-size: 65px;
+    font-size: rem(65px);
     line-height: 1;
     color: $white;
+
+   @include phones() {
+        font-size: rem(54px);
+    }
 }
 
-.product__arrow-scroll {
-    position: absolute;
-    top: 590px;
-    width: 29px;
-    height: 20px;
-    background: url("../img/icons/arrow-scroll.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+.product__link {
+    padding-top: rem(60px);
+    transform: translateX(-50%);
+    transition: .2s;
+
+    &:hover {
+        .product__arrow-scroll {
+            margin-top: rem(-15px);
+            width: rem(40px);
+            height: rem(25px);
+        }
+    }
+
+    @include tablets() {
+        padding: rem(150px) 0 rem(50px) 0;
+        margin-left: 40px;
+    }
+
+    @include phones() {
+        padding: rem(70px) 0 rem(50px) 0;
+    }
 }

@@ -1,0 +1,37 @@
+.header-hamburger__link {
+    position: relative;
+    margin-left: rem(30px);
+    vertical-align: middle;
+    align-items: center;
+    height: rem(22px);
+    display: none;
+
+    @include tablets() {
+        display: flex;
+    }
+}
+
+.header-hamburger__link-menu {
+    &,
+    &:before,
+    &:after {
+        width: rem(24px);
+        height: rem(5px);
+        background: $white;
+        border-radius: rem(3px);
+    }
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute; 
+        display: block;
+
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+}

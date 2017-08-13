@@ -1,4 +1,8 @@
 // Стилизация страницы с отзывами
+.reviews {
+    
+}
+
 .reviews__list {
     display: flex;
     flex-wrap: wrap;
@@ -20,6 +24,11 @@
         transition: .8s;
         opacity: 1;
     }
+
+    @include tablets() {
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .reviews__hover {
@@ -28,7 +37,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 50px 40px 50px 20px;
+    padding: rem(50px) rem(40px) rem(50px) rem(20px);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -36,35 +45,57 @@
     background-color: rgba($dark, .7);
     transform: scale(.5);
     opacity: 0;
+
+    @include tablets() {
+        align-items: center;
+        text-align: center;
+    }    
 }
 
 .reviews__title {
     @include gagalin();
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 }
 
 .reviews__text {
-    margin: 29px 0 0 0;
+    margin: rem(29px) 0 0 0;
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
     line-height: rem(24px);
+
+    @include tablets() {
+        margin: 0;
+        text-align: center;
+    }
+
+    @include phones() {   
+        display: none;        
+    }
 }
 
 .reviews__link {
-    padding: 8px 15px;
-    margin-top: 15px;
+    padding: rem(8px) rem(15px);
+    margin-top: rem(15px);
     @include ubuntu(medium);
-    font-size: 13px;
+    font-size: rem(13px);
     text-decoration: none;
     text-transform: uppercase;
     color: $white;
-    border-radius: 5px;
+    border-radius: rem(5px);
     background-color: $dark;
     transition: .4s;
 
     &:hover {
         background-color: darken($dark, 10%);
+    }
+
+    @include tablets() {
+        margin: 0;
+    }
+
+    @include phones() {   
+        margin-top: rem(25px);        
     }
 }

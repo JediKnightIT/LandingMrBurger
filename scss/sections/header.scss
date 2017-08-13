@@ -1,0 +1,58 @@
+// Стилизация шапки
+.header {
+    padding-top: rem(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.header__nav {
+    margin-right: rem(15px);
+}
+
+.header__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    
+    @include tablets() {
+        display: none;
+    }
+}
+
+.header__item {
+    display: flex;
+    align-items: center;
+    
+    &::before {
+        content: "";
+        margin: 0 rem(15px);
+        display: block;
+        @include circle(rem(4px), $white);
+    }
+
+    &:first-child::before {
+        display: none;
+    }
+}
+
+.header__link {
+    display: inline-block;
+    vertical-align: middle;
+    @include ubuntu(medium);
+    font-size: rem(13px);
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+
+    &:hover {
+        color: $yellow;
+    }
+}

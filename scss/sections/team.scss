@@ -12,22 +12,32 @@
     top: 0;
     right: 0;
     bottom: 0;
-    padding-left: 78px;
+    padding-left: rem(78px);
     width: 50%;
     display: flex;
     flex-direction: column;
     background: rgba($dark, 0.93);
+    
+    @include tablets() {
+        padding: 0; 
+        align-items: center;       
+        width: 100%;
+    }
 }
 
 .team__title {
-    padding-top: 89px;
-    padding-bottom: 80px;
+    padding-top: rem(89px);
+    padding-bottom: rem(80px);
     color: $yellow;
     display: flex;
     align-items: center;
     @include gagalin();
-    font-size: 72px;
+    font-size: rem(72px);
     line-height: 1;
+
+    @include phones() {   
+        font-size: rem(50px);        
+    }
 }
 
 .team__item {
@@ -36,6 +46,7 @@
         .team__container {
             height: auto;
         }
+        
         .team__name {
             color: $yellow;
 
@@ -44,38 +55,61 @@
             }
         }
     }
+    
+    @include tablets() {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
 }
 
 .team__name {
-    padding-top: 35px;
+    padding-top: rem(35px);
     display: flex;
     align-items: center;
     @include gagalin();
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
 
     &::before {
         content: "";
-        margin-right: 10px;
+        margin-right: rem(10px);
         width: 0;
         height: 0;
-        border: 8px solid transparent;
+        border: rem(8px) solid transparent;
         border-top-color: $yellow;
         border-bottom: none;
+    }
+
+    &:hover {
+        color: $yellow;
+        transition: .3s;
+    }
+
+    @include tablets() {
+        @include gagalin();
+        font-size: rem(24px);
     }
 }
 
 .team__container {
-    margin-top: 17px;
+    margin-top: rem(17px);
     display: flex;
     overflow: hidden;
     height: 0;
+
+    @include tablets() {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .team__photo {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     overflow: hidden;
     border-radius: 50%;
 }
@@ -89,24 +123,33 @@
 }
 
 .team__about {
-    margin-left: 20px;
+    margin-left: rem(20px);
     display: flex;
     flex-direction: column;
-    width: 223px;
-    height: 98px;
+    width: rem(223px);
+    height: rem(98px);
+
+    @include tablets() {
+        margin: 0;
+        width: rem(350px);
+    }
 }
 
 .team__specialty {
     @include ubuntu(bold);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
+
+    @include tablets() {
+        padding-top: rem(20px);
+    }
 }
 
 .team__text {
     margin: 0;
-    padding-top: 10px;
+    padding-top: rem(10px);
     @include ubuntu(light);
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
     line-height: 1.7;
 }

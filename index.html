@@ -13,16 +13,23 @@
 <body>
 	<div class="wrapper">
 		<div class="maincontent">
-			<nav class="fullscreen-menu">
-				<ul class="fullscreen-menu__list">
-					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Почему мы</a></li>
-					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Меню</a></li>
-					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Советы</a></li>
-					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Кто мы</a></li>
-					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a></li>
-					<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Контакты</a></li>
-				</ul>
-			</nav>
+			<div class="fullscreen-menu">
+				<a class="fullscreen-menu__link-close" href="#">
+					<svg class="fullscreen-menu__close">
+						<use xlink:href="./img/icons/sprite/sprite.svg#close"></use>
+					</svg>
+				</a>
+				<nav class="fullscreen-menu__nav">
+					<ul class="fullscreen-menu__list">
+						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Почему мы</a></li>
+						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Меню</a></li>
+						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Советы</a></li>
+						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Кто мы</a></li>
+						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a></li>
+						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Контакты</a></li>
+					</ul>
+				</nav>
+			</div>
 			<!-- Главная секция -->
 			<section class="section product">
 				<div class="container">
@@ -506,6 +513,8 @@
 			<li class="nav__item"><a href="#" class="nav__link"></a></li>
 		</ul>
 	</nav>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

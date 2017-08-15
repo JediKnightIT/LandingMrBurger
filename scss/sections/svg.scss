@@ -1,4 +1,17 @@
 // Стилизация svg
+.fullscreen-menu__close {
+    width: rem(32px);
+    height: rem(20px);
+    fill: #c2c2c3;
+    transition: .5s;
+    transform-origin: rem(8px) rem(8px);
+
+    &:hover {
+        fill: $yellow;
+        transform: rotate(90deg);
+    }
+}
+
 .product__arrow-scroll,
 .burgers__slider-btn {
     width: rem(32px);

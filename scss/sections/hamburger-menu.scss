@@ -17,7 +17,7 @@
     &:after {
         width: rem(24px);
         height: rem(5px);
-        background: $white;
+        background-color: $white;
         border-radius: rem(3px);
     }
 
@@ -26,8 +26,8 @@
         content: "";
         position: absolute; 
         display: block;
-
     }
+
     &:before {
         top: 0;
     }

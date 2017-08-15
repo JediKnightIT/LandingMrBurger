@@ -157,20 +157,25 @@ p {
       left: 0;
       bottom: 0;
       right: 0;
-      padding: 17.125rem 16.8125rem 0 16.8125rem;
       display: none;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
       background-color: rgba(47, 50, 52, 0.99);
-      z-index: 1000; } }
+      z-index: 100; } }
+
+.fullscreen-menu__link-close {
+  position: absolute;
+  top: 1.875rem;
+  right: 1.25rem;
+  width: 2rem;
+  height: 1.25rem; }
+
+.fullscreen-menu__nav {
+  padding: 17.125rem 0 0 0; }
 
 .fullscreen-menu__item {
   text-align: center; }
   .fullscreen-menu__item::before {
     content: "";
-    margin: 1.5625rem 6.875rem;
+    margin: 2rem auto;
     display: block;
     width: 0.4375rem;
     height: 0.4375rem;
@@ -185,7 +190,12 @@ p {
   font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .fullscreen-menu__link:hover {
+    color: #f9b43b; }
 
 .header {
   padding-top: 0.625rem;
@@ -204,7 +214,8 @@ p {
   width: 100%; }
 
 .header__logo {
-  margin-right: auto; }
+  margin-right: auto;
+  z-index: 500; }
 
 .header__nav {
   margin-right: 0.9375rem; }
@@ -379,7 +390,7 @@ p {
 .header-hamburger__link-menu, .header-hamburger__link-menu:before, .header-hamburger__link-menu:after {
   width: 1.5rem;
   height: 0.3125rem;
-  background: #fff;
+  background-color: #fff;
   border-radius: 0.1875rem; }
 
 .header-hamburger__link-menu:before, .header-hamburger__link-menu:after {
@@ -710,6 +721,10 @@ p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background: rgba(47, 50, 52, 0.93); }
   @media screen and (max-width: 768px) {
     .team__content {
@@ -721,7 +736,6 @@ p {
       width: 100%; } }
 
 .team__title {
-  padding-top: 5.5625rem;
   padding-bottom: 5rem;
   color: #f9b43b;
   display: -webkit-box;
@@ -1434,6 +1448,22 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+
+.fullscreen-menu__close {
+  width: 2rem;
+  height: 1.25rem;
+  fill: #c2c2c3;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  -webkit-transform-origin: 0.5rem 0.5rem;
+  -ms-transform-origin: 0.5rem 0.5rem;
+  transform-origin: 0.5rem 0.5rem; }
+  .fullscreen-menu__close:hover {
+    fill: #f9b43b;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
 
 .product__arrow-scroll,
 .burgers__slider-btn {

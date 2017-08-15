@@ -1,3 +1,4 @@
+// Стилизация полноэкранного меню
 .fullscreen-menu {
     display: none;
 
@@ -7,12 +8,22 @@
         left: 0;
         bottom: 0;
         right: 0;
-        padding: rem(274px) rem(269px) 0 rem(269px);
-        display: none;
-        justify-content: center;
+        display: none;  // Изменить через JS на flex!!!!
         background-color: rgba($dark, .99);
-        z-index: 1000;
+        z-index: 100;
     }
+}
+
+.fullscreen-menu__link-close {
+    position: absolute;
+    top: rem(30px);
+    right: rem(20px);
+    width: rem(32px);
+    height: rem(20px);
+}
+
+.fullscreen-menu__nav {
+    padding: rem(274px) 0 0 0;
 }
 
 .fullscreen-menu__item {
@@ -20,7 +31,7 @@
 
     &::before {
         content: "";
-        margin: rem(25px) rem(110px);
+        margin: rem(32px) auto;
         display: block;
         @include circle(rem(7px), $white);
     }
@@ -36,4 +47,10 @@
     color: $white;
     text-decoration: none;
     text-transform: uppercase;
+    transition: .3s;
+    
+
+    &:hover {
+        color: $yellow;
+    }
 }

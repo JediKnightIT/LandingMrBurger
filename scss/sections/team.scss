@@ -16,6 +16,7 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background: rgba($dark, 0.93);
     
     @include tablets() {
@@ -26,7 +27,6 @@
 }
 
 .team__title {
-    padding-top: rem(89px);
     padding-bottom: rem(80px);
     color: $yellow;
     display: flex;

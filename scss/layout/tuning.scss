@@ -3,16 +3,29 @@
     overflow: hidden; //на wrapper всегда должен быть 
     width: 100%;
     // min-width: rem(940px) + rem(20px); убрали статичность
-    min-height: 100%;
-    overflow: hidden;
+    height: 100%;
+}
+
+
+.maincontent {
+  position: relative;
+  top: 0; 
+  height: 100%;
+  min-height: 650px;
+  transition: transform 1s;
+  will-change: transform;
 }
 
 .section {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
-    // min-height: rem(650px);
+    height: 100%;
+    min-height: rem(650px);
+
+    @include tablets() {
+        min-height: auto;
+    }
 }
 
 .container {
@@ -27,13 +40,14 @@
 }
 
 .btn {
-    padding: rem(10px) rem(15px);
+    padding: rem(9px) rem(15px) rem(9px) rem(16px);
     min-width: rem(98px);
     color: $white;
     text-decoration: none;
     @include ubuntu(medium);
     font-size: rem(13px);
     line-height: 1.42;
+    letter-spacing: rem(0.5px);
     text-transform: uppercase;
     border-radius: rem(5px);
     background-color: $orange;

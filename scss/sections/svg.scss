@@ -14,10 +14,10 @@
 
 .product__arrow-scroll,
 .burgers__slider-btn {
-    width: rem(32px);
-    height: rem(20px);
+    width: rem(33px);
+    height: rem(15px);
     fill: $white;
-    transition: .2s;
+    transition: .3s;
 }
 
 .advantages__icon {
@@ -39,7 +39,7 @@
 
 .burgers__composition-icon {
     width: rem(45px);
-    height: rem(45px);
+    height: rem(55px);
     fill: $white;    
 }
 
@@ -78,6 +78,20 @@
     fill: $white;
 }
 
+
+.burgers__link-icon {
+    width: rem(20px);
+    height: rem(20px);
+    fill: rgba($orange, .6);
+    transition: .5s;
+    transform-origin: rem(7px) rem(7px);
+
+    &:hover {
+        fill: rgba($orange, 1);        
+        transform: rotate(90deg);
+    } 
+}
+
 .footer__icon {
     width: rem(11px);
     height: rem(11px);
@@ -92,7 +106,7 @@
     transition: .4s;
 
     &:hover {
-        fill: #fff;
+        fill: $white;
         transition: .4s;
     }
 }

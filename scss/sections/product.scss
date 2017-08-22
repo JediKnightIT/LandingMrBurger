@@ -2,7 +2,7 @@
 .product {
     position: relative;
     display: flex;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     background: url("../img/background/main_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,8 +16,8 @@
     align-items: center;
 
     @include tablets() {
+        margin-top:rem(125px);        
         flex-flow: row wrap;
-        margin-top:rem(54px);
     }
 }
 
@@ -28,19 +28,22 @@
 }
 
 .product__burger {
-    padding-right: rem(10px);
+    margin-bottom: rem(122px);
+    margin-left: rem(16px);
+    padding-right: rem(14px);
     width: 70%;    
 
     @include tablets() {
+        margin: 0 rem(18px) 0 0;    
         padding-right: 0;
     }
 }
 
 .product__text {
-    margin-top: rem(65px);
+    margin-bottom: rem(115px);
 
     @include tablets() {
-        margin: 0 0 rem(160px) 0;
+        margin: rem(21px) rem(28px) rem(220px) 0;
         text-align: center;
     }
 }
@@ -50,9 +53,10 @@
     @include gagalin();
     font-size: rem(72px);
     color: $yellow;
-    
+
     @include tablets() {
-        margin-top: rem(30px);
+        margin-bottom: rem(11px);
+        font-size: rem(77px);    
     }
 
     @include phones() {
@@ -73,15 +77,21 @@
 
 .product__link {
     position: absolute;
-    bottom: 5%;
-    right: 50%;
+    bottom: 7%;
+    left: calc(50% - 16px);
     transition: .2s;
 
     &:hover {
         .product__arrow-scroll {
-            margin-top: rem(-15px);
-            width: rem(40px);
-            height: rem(25px);
+            width: rem(35px);
+            height: rem(17px);
+            fill: $yellow;
+            transition: .3s;            
         }
+    }
+
+    @include tablets() {
+        bottom: 4%;
+        left: calc(50% - 24px);    
     }
 }

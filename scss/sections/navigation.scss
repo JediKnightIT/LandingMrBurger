@@ -1,7 +1,7 @@
 .nav {
     position: fixed;
     top: rem(90px);
-    right: rem(50px);
+    right: rem(49px);
 
     @include tablets() {
         display: none;
@@ -9,7 +9,7 @@
 }
 
 .nav__item {
-    margin-bottom: rem(10px);
+    margin-bottom: rem(5px);
 }
 
 .nav__link {
@@ -40,15 +40,23 @@
     }
 }
 
-.nav__link_active::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: block;
-    width: rem(16px);
-    height: rem(16px);
-    border: rem(1px) solid $white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
+// Препроц
+.nav__item {
+    &.active {
+        .nav__link {
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: rem(16px);
+                height: rem(16px);
+                border: rem(1px) solid $white;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
 }

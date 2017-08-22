@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Mr.Burger</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" type="" href="css/style.css">
 </head>
 
@@ -21,17 +22,17 @@
 				</a>
 				<nav class="fullscreen-menu__nav">
 					<ul class="fullscreen-menu__list">
-						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Почему мы</a></li>
-						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Меню</a></li>
-						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Советы</a></li>
-						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Кто мы</a></li>
-						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Свяжитесь с нами</a></li>
-						<li class="fullscreen-menu__item"><a href="#" class="fullscreen-menu__link">Контакты</a></li>
+						<li class="fullscreen-menu__item"><a class="fullscreen-menu__link" href="" data-scroll="1">Почему мы</a></li>
+						<li class="fullscreen-menu__item"><a class="fullscreen-menu__link" href="" data-scroll="4">Меню</a></li>
+						<li class="fullscreen-menu__item"><a class="fullscreen-menu__link">Советы</a></li>
+						<li class="fullscreen-menu__item"><a class="fullscreen-menu__link" href="" data-scroll="3">Кто мы</a></li>
+						<li class="fullscreen-menu__item"><a class="fullscreen-menu__link" href="" data-scroll="6">Свяжитесь с нами</a></li>
+						<li class="fullscreen-menu__item"><a class="fullscreen-menu__link" href="" data-scroll="7">Контакты</a></li>
 					</ul>
 				</nav>
 			</div>
 			<!-- Главная секция -->
-			<section class="section product">
+			<section class="section product active">
 				<div class="container">
 					<header class="header">
 						<a href="index.html" class="header__logo">
@@ -40,26 +41,26 @@
 						<nav class="header__nav">
 							<ul class="header__list">
 								<li class="header__item">
-									<a href="#" class="header__link">О нас</a>
+									<a class="header__link" href="" data-scroll="1">О нас</a>
 								</li>
 								<li class="header__item">
-									<a href="#" class="header__link">Бургеры</a>
+									<a class="header__link" href="" data-scroll="2">Бургеры</a>
 								</li>
 								<li class="header__item">
-									<a href="#" class="header__link">Команда</a>
+									<a class="header__link" href="" data-scroll="3">Команда</a>
 								</li>
 								<li class="header__item">
-									<a href="#" class="header__link">Меню</a>
+									<a class="header__link" href="" data-scroll="4">Меню</a>
 								</li>
 								<li class="header__item">
-									<a href="#" class="header__link">Отзывы</a>
+									<a class="header__link" href="" data-scroll="5">Отзывы</a>
 								</li>
 								<li class="header__item">
-									<a href="#" class="header__link">Контакты</a>
+									<a class="header__link" href="" data-scroll="7">Контакты</a>
 								</li>
 							</ul>
 						</nav>
-						<a href="#" class="btn">Заказать</a>
+						<a class="btn" href="" data-scroll="6">Заказать</a>
 						<a class="header-hamburger__link" href="#">
 							<div class="header-hamburger__link-menu"></div>
 						</a>
@@ -72,7 +73,7 @@
 						</div>
 					</div>
 				</div>
-				<a class="product__link">
+				<a class="product__link" href="" data-scroll="1">
 					<svg class="product__arrow-scroll">
 						<use xlink:href="./img/icons/sprite/sprite.svg#arrow-scroll"></use>
 					</svg>
@@ -122,82 +123,174 @@
 							<use xlink:href="./img/icons/sprite/sprite.svg#arrow-scroll"></use>
 						</svg>
 					</a>
-					<div class="burgers__assortment">
-						<div class="burgers__container-left">
-							<div class="burgers__composition">
-								<a class="burgers__link" href="#">
-									<svg class="burgers__composition-icon">
-										<use xlink:href="./img/icons/sprite/sprite.svg#burger"></use>
-									</svg>
-									<span class="burgers__composition-text">состав</span>
-								</a>
-								<ul class="burgers__list">
-									<li class="burgers__item">
-										<svg class="burgers__item-icon beef">
-											<use xlink:href="./img/icons/sprite/sprite.svg#beef"></use>
+					<ul class="burgers__slider-list">
+						<li class="burgers__slider-item">
+							<div class="burgers__assortment">
+								<div class="burgers__container-left">
+									<div class="burgers__composition">
+										<a class="burgers__link" href="#">
+											<svg class="burgers__composition-icon">
+												<use xlink:href="./img/icons/sprite/sprite.svg#burger"></use>
+											</svg>
+											<span class="burgers__composition-text">состав</span>
+										</a>
+										<ul class="burgers__list">
+											<a class="burgers__link-close" href="#">
+												<svg class="burgers__link-icon">
+													<use xlink:href="./img/icons/sprite/sprite.svg#close"></use>
+												</svg>
+											</a>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon beef">
+													<use xlink:href="./img/icons/sprite/sprite.svg#beef"></use>
+												</svg>
+												<span class="burgers__item-text">Говядина</span>
+												<span class="burgers__item-weight">300 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon buns">
+													<use xlink:href="./img/icons/sprite/sprite.svg#buns"></use>
+												</svg>
+												<span class="burgers__item-text">Булочки</span>
+												<span class="burgers__item-weight">100 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon salad">
+													<use xlink:href="./img/icons/sprite/sprite.svg#salad"></use>
+												</svg>
+												<span class="burgers__item-text">Зелень</span>
+												<span class="burgers__item-weight">70 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon sauce">
+													<use xlink:href="./img/icons/sprite/sprite.svg#sauce"></use>
+												</svg>
+												<span class="burgers__item-text">Соус</span>
+												<span class="burgers__item-weight">150 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon cucumber">
+													<use xlink:href="./img/icons/sprite/sprite.svg#cucumber"></use>
+												</svg>
+												<span class="burgers__item-text">Овощи</span>
+												<span class="burgers__item-weight">200 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon cheese">
+													<use xlink:href="./img/icons/sprite/sprite.svg#cheese"></use>
+												</svg>
+												<span class="burgers__item-text">Сыр</span>
+												<span class="burgers__item-weight">80 г</span>
+											</li>
+										</ul>
+									</div>
+									<img class="burgers__img" src="img/burgers/black_burger.png" alt="Чёрный бургер">
+									<div class="burgers__calories">
+										<svg class="burgers__calories-quantity">
+											<use xlink:href="./img/icons/sprite/sprite.svg#kkal"></use>
 										</svg>
-										<span class="burgers__item-text">Говядина</span>
-										<span class="burgers__item-weight">300 г</span>
-									</li>
-									<li class="burgers__item">
-										<svg class="burgers__item-icon buns">
-											<use xlink:href="./img/icons/sprite/sprite.svg#buns"></use>
-										</svg>
-										<span class="burgers__item-text">Булочки</span>
-										<span class="burgers__item-weight">100 г</span>
-									</li>
-									<li class="burgers__item">
-										<svg class="burgers__item-icon salad">
-											<use xlink:href="./img/icons/sprite/sprite.svg#salad"></use>
-										</svg>
-										<span class="burgers__item-text">Зелень</span>
-										<span class="burgers__item-weight">70 г</span>
-									</li>
-									<li class="burgers__item">
-										<svg class="burgers__item-icon sauce">
-											<use xlink:href="./img/icons/sprite/sprite.svg#sauce"></use>
-										</svg>
-										<span class="burgers__item-text">Соус</span>
-										<span class="burgers__item-weight">150 г</span>
-									</li>
-									<li class="burgers__item">
-										<svg class="burgers__item-icon cucumber">
-											<use xlink:href="./img/icons/sprite/sprite.svg#cucumber"></use>
-										</svg>
-										<span class="burgers__item-text">Овощи</span>
-										<span class="burgers__item-weight">200 г</span>
-									</li>
-									<li class="burgers__item">
-										<svg class="burgers__item-icon cheese">
-											<use xlink:href="./img/icons/sprite/sprite.svg#cheese"></use>
-										</svg>
-										<span class="burgers__item-text">Сыр</span>
-										<span class="burgers__item-weight">80 г</span>
-									</li>
-								</ul>
+										<span class="burgers__calories-number">1200</span>
+										<span class="burgers__calories-text">ккал</span>
+									</div>
+								</div>
+								<div class="burgers__container-right">
+									<h1 class="burgers__name">Dark Beef Burger</h1>
+									<p class="burgers__text">
+										Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+										луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+									</p>
+									<div class="burgers__delivery">
+										<span class="burgers__price">500</span>
+										<span class="burgers__currency">рублей</span>
+										<a href="#" class="btn">Заказать</a>
+									</div>
+								</div>
 							</div>
-							<img class="burgers__img" src="img/burgers/black_burger.png" alt="Чёрный бургер">
-							<div class="burgers__calories">
-								<svg class="burgers__calories-quantity">
-									<use xlink:href="./img/icons/sprite/sprite.svg#kkal"></use>
-								</svg>
-								<span class="burgers__calories-number">1200</span>
-								<span class="burgers__calories-text">ккал</span>
+						</li>
+						<li class="burgers__slider-item">
+							<div class="burgers__assortment">
+								<div class="burgers__container-left">
+									<div class="burgers__composition">
+										<a class="burgers__link" href="#">
+											<svg class="burgers__composition-icon">
+												<use xlink:href="./img/icons/sprite/sprite.svg#burger"></use>
+											</svg>
+											<span class="burgers__composition-text">состав</span>
+										</a>
+										<ul class="burgers__list">
+											<a class="burgers__link-close" href="#">
+												<svg class="burgers__link-icon">
+													<use xlink:href="./img/icons/sprite/sprite.svg#close"></use>
+												</svg>
+											</a>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon beef">
+													<use xlink:href="./img/icons/sprite/sprite.svg#beef"></use>
+												</svg>
+												<span class="burgers__item-text">Говядина</span>
+												<span class="burgers__item-weight">300 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon buns">
+													<use xlink:href="./img/icons/sprite/sprite.svg#buns"></use>
+												</svg>
+												<span class="burgers__item-text">Булочки</span>
+												<span class="burgers__item-weight">100 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon salad">
+													<use xlink:href="./img/icons/sprite/sprite.svg#salad"></use>
+												</svg>
+												<span class="burgers__item-text">Зелень</span>
+												<span class="burgers__item-weight">70 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon sauce">
+													<use xlink:href="./img/icons/sprite/sprite.svg#sauce"></use>
+												</svg>
+												<span class="burgers__item-text">Соус</span>
+												<span class="burgers__item-weight">150 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon cucumber">
+													<use xlink:href="./img/icons/sprite/sprite.svg#cucumber"></use>
+												</svg>
+												<span class="burgers__item-text">Овощи</span>
+												<span class="burgers__item-weight">200 г</span>
+											</li>
+											<li class="burgers__item">
+												<svg class="burgers__item-icon cheese">
+													<use xlink:href="./img/icons/sprite/sprite.svg#cheese"></use>
+												</svg>
+												<span class="burgers__item-text">Сыр</span>
+												<span class="burgers__item-weight">80 г</span>
+											</li>
+										</ul>
+									</div>
+									<img class="burgers__img" src="img/burgers/spicy_shrimp_urger.png" alt="Чёрный бургер">
+									<div class="burgers__calories">
+										<svg class="burgers__calories-quantity">
+											<use xlink:href="./img/icons/sprite/sprite.svg#kkal"></use>
+										</svg>
+										<span class="burgers__calories-number">1200</span>
+										<span class="burgers__calories-text">ккал</span>
+									</div>
+								</div>
+								<div class="burgers__container-right">
+									<h1 class="burgers__name">Dark Beef Burger</h1>
+									<p class="burgers__text">
+										Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
+										луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+									</p>
+									<div class="burgers__delivery">
+										<span class="burgers__price">500</span>
+										<span class="burgers__currency">рублей</span>
+										<a href="#" class="btn">Заказать</a>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="burgers__container-right">
-							<h1 class="burgers__name">Dark Beef Burger</h1>
-							<p class="burgers__text">
-								Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами,
-								луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-							</p>
-							<div class="burgers__delivery">
-								<span class="burgers__price">500</span>
-								<span class="burgers__currency">рублей</span>
-								<a href="#" class="btn">Заказать</a>
-							</div>
-						</div>
-					</div>
+						</li>
+					</ul>
 					<a href="#" class="burgers__slider-right">
 						<svg class="burgers__slider-btn">
 							<use xlink:href="./img/icons/sprite/sprite.svg#arrow-scroll"></use>
@@ -212,49 +305,57 @@
 					<ul class="team__list">
 						<li class="team__item">
 							<h3 class="team__name">Дэниэл Редклиф</h3>
-							<div class="team__container">
-								<div class="team__photo">
-									<img class="team__img" src="img/team/team_photo.jpg" alt="Наша команда">
-								</div>
-								<div class="team__about">
-									<div class="team__specialty">Оператор</div>
-									<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+							<div class="team__accordion">
+								<div class="team__container">
+									<div class="team__photo">
+										<img class="team__img" src="img/team/team_photo.jpg" alt="Наша команда">
+									</div>
+									<div class="team__about">
+										<div class="team__specialty">Оператор</div>
+										<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+									</div>
 								</div>
 							</div>
 						</li>
-						<li class="team__item active">
+						<li class="team__item ">
 							<h3 class="team__name">Ричард Джеймс</h3>
-							<div class="team__container">
-								<div class="team__photo">
-									<img src="img/team/team_photo.jpg" alt="Наша команда" class="team__img">
-								</div>
-								<div class="team__about">
-									<div class="team__specialty">Оператор</div>
-									<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+							<div class="team__accordion">
+								<div class="team__container">
+									<div class="team__photo">
+										<img class="team__img" src="img/team/team_photo.jpg" alt="Наша команда">
+									</div>
+									<div class="team__about">
+										<div class="team__specialty">Оператор</div>
+										<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+									</div>
 								</div>
 							</div>
 						</li>
 						<li class="team__item">
 							<h3 class="team__name">Джейк Финн</h3>
-							<div class="team__container">
-								<div class="team__photo">
-									<img src="img/team/team_photo.jpg" alt="Наша команда" class="team__img">
-								</div>
-								<div class="team__about">
-									<div class="team__specialty">Оператор</div>
-									<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+							<div class="team__accordion">
+								<div class="team__container">
+									<div class="team__photo">
+										<img class="team__img" src="img/team/team_photo.jpg" alt="Наша команда">
+									</div>
+									<div class="team__about">
+										<div class="team__specialty">Оператор</div>
+										<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+									</div>
 								</div>
 							</div>
 						</li>
 						<li class="team__item">
 							<h3 class="team__name">Николай Иванов</h3>
-							<div class="team__container">
-								<div class="team__photo">
-									<img src="img/team/team_photo.jpg" alt="Наша команда" class="team__img">
-								</div>
-								<div class="team__about">
-									<div class="team__specialty">Оператор</div>
-									<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+							<div class="team__accordion">
+								<div class="team__container">
+									<div class="team__photo">
+										<img class="team__img" src="img/team/team_photo.jpg" alt="Наша команда">
+									</div>
+									<div class="team__about">
+										<div class="team__specialty">Оператор</div>
+										<p class="team__text">С радостью поможет подобрать идеальный бургер и оформить заказ. </p>
+									</div>
 								</div>
 							</div>
 						</li>
@@ -265,7 +366,7 @@
 			<section class="section menu">
 				<h1 class="menu__title">Меню</h1>
 				<ul class="menu__list">
-					<li class="menu__item active">
+					<li class="menu__item">
 						<div class="menu__container menu__container_meat">
 							<span class="menu__subtitle menu__subtitle_meat">Для мясоедов</span>
 						</div>
@@ -314,7 +415,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item reviews__item_scale" style="background-image: url('img/reviews/review_b.jpg')">
@@ -322,7 +423,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item" style="background-image: url('img/reviews/review_c.jpg')">
@@ -330,7 +431,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item" style="background-image: url('img/reviews/review_d.jpg')">
@@ -338,7 +439,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item" style="background-image: url('img/reviews/review_e.jpg')">
@@ -346,7 +447,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item" style="background-image: url('img/reviews/review_f.jpg')">
@@ -354,7 +455,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item" style="background-image: url('img/reviews/review_g.jpg')">
@@ -362,7 +463,7 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 					<li class="reviews__item" style="background-image: url('img/reviews/review_h.jpg')">
@@ -370,10 +471,16 @@
 							<h3 class="reviews__title">Константин Спилберг</h3>
 							<p class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
 								такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
-							<a href="#" class="reviews__link">Подробнее</a>
+							<a class="reviews__link" href="#" data-fancybox data-src="#popup">Подробнее</a>
 						</div>
 					</li>
 				</ul>
+				<div class="reviews__popup" id="popup">
+					<h3 class="reviews__popup-title">Константин Спилберг</h3>
+					<p class="reviews__popup-text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
+						такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять,
+						невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+				</div>
 			</section>
 			<!-- Секция доставки -->
 			<section class="section delivery">
@@ -381,65 +488,65 @@
 					<h1 class="delivery__title">Закажите доставку</h1>
 					<div class="delivery__form">
 						<div class="delivery__form-left">
-							<form action="#">
+							<form action="server.php">
 								<div class="delivery__form-row">
 									<label class="delivery__label delivery__label-first">
 										<div class="delivery__form-title">Имя</div>
-										<input type="text" class="delivery__form-input">
+										<input type="text" id="clientname" name="clientname" class="delivery__form-input">
 									</label>
 									<label class="delivery__label delivery__label-first">
 										<div class="delivery__form-title">Телефон</div>
-										<input type="text" class="delivery__form-input" placeholder="89212264923">
+										<input type="text" id="phone" name="phone" class="delivery__form-input" placeholder="89212264923">
 									</label>
 								</div>
 								<div class="delivery__form-row">
 									<label class="delivery__label delivery__label-second">
 										<div class="delivery__form-title">Улица</div>
-										<input type="text" class="delivery__form-input">
+										<input type="text" id="street" name="street" class="delivery__form-input">
 									</label>
 								</div>
 								<div class="delivery__form-row">
 									<label class="delivery__label delivery__label-third">
 										<div class="delivery__form-title">Дом</div>
-										<input type="text" class="delivery__form-input">
+										<input type="text" id="house" name="house" class="delivery__form-input">
 									</label>
 									<label class="delivery__label delivery__label-third">
 										<div class="delivery__form-title">Корпус</div>
-										<input type="text" class="delivery__form-input">
+										<input type="text" id="housing" name="housing" class="delivery__form-input">
 									</label>
 									<label class="delivery__label delivery__label-third">
 										<div class="delivery__form-title">Квартира</div>
-										<input type="text" class="delivery__form-input">
+										<input type="text" id="flat" name="flat" class="delivery__form-input">
 									</label>
 									<label class="delivery__label delivery__label-third">
 										<div class="delivery__form-title">Этаж</div>
-										<input type="text" class="delivery__form-input">
+										<input type="text" id="floor" name="floor" class="delivery__form-input">
 									</label>
 								</div>
 							</form>
 						</div>
 						<div class="delivery__form-right">
-							<form>
+							<form action="server.php">
 								<div class="delivery__form-row">
 									<label class="delivery__label delivery__label-textarea">
 										<div class="delivery__form-title">Комментарий</div>
-										<textarea class="delivery__form-textarea"></textarea>
+										<textarea class="delivery__form-textarea" id="message" name="message"></textarea>
 									</label>
 								</div>
 								<div class="delivery__form-radio">
 									<label class="delivery__btns">
-										<input type="radio" name="choise" class="delivery__control-choise">
+										<input type="radio" id="pay-choise" name="pay-choise" class="delivery__control-choise">
 										<div class="delivery__btns-fake"></div>
 										<div class="delivery__btns-text">Потребуется сдача</div>				
 									</label>
 									<label class="delivery__btns">
-										<input type="radio" name="choise" class="delivery__control-choise" checked>
+										<input type="radio" id="pay-choise" name="pay-choise" class="delivery__control-choise" checked>
 										<div class="delivery__btns-fake"></div>
 										<div class="delivery__btns-text">Оплата по карте</div>
 									</label>
 								</div>
 								<label class="delivery__check">
-									<input type="checkbox" class="delivery__control-choise">
+									<input type="checkbox" class="delivery__control-choise" id="dont-distrub" name="dont-distrub" value="1">
 									<div class="delivery__check-fake"></div>
 									<div class="delivery__check-text">Не перезванивать</div>
 								</label>
@@ -454,6 +561,42 @@
 			</section>
 			<!-- Секция контактной информации -->
 			<section class="section contacts">
+				<div id="map"></div>
+				<script>
+					var map;
+
+					function initMap() {
+						var mapContainer = document.getElementById('map');
+						var mapOptions = {
+							center: {
+								lat: 59.938930005519346,
+								lng: 30.324706027089398
+							},
+							zoom: 12
+						};
+
+						var markers = [
+							{lat: 59.938930005519346, lng: 30.324706027089398},
+							{lat: 59.972626832903025, lng: 30.311013243225243},							
+							{lat: 59.94601419920475, lng: 30.381101991987038},
+							{lat: 59.88814256989181, lng: 30.313449591868274},														
+						]
+						
+						var markerIcon = 'img/icons/map-marker.png'						
+
+						if (mapContainer) {
+							map = new google.maps.Map(mapContainer, mapOptions);
+
+							markers.forEach(function(marker) {
+								new google.maps.Marker({
+									position: marker,
+									icon: markerIcon,
+									map: map
+								});
+							})
+						}
+					}
+				</script>
 				<footer class="footer">
 					<div class="container footer__container">
 						<div class="footer__contacts">
@@ -503,17 +646,22 @@
 	<!-- Навигационное меню -->
 	<nav class="nav">
 		<ul class="nav__list">
-			<li class="nav__item"><a href="#" class="nav__link nav__link_active"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
-			<li class="nav__item"><a href="#" class="nav__link"></a></li>
+			<li class="nav__item active"><a class="nav__link" href="" data-scroll="0"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="1"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="2"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="3"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="4"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="5"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="6"></a></li>
+			<li class="nav__item"><a class="nav__link" href="" data-scroll="7"></a></li>
 		</ul>
 	</nav>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGHt_OEYXdVRzpyPXC5ZI8oSGGdTtclso&callback=initMap" async
+	    defer></script>
 	<script src="js/main.js"></script>
 </body>
 

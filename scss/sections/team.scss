@@ -12,39 +12,51 @@
     top: 0;
     right: 0;
     bottom: 0;
-    padding-left: rem(78px);
-    width: 50%;
+    padding: 0 rem(90px) rem(36px) rem(76px);
+    width: 49%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     background: rgba($dark, 0.93);
     
     @include tablets() {
-        padding: 0; 
+        // padding: rem(245px) rem(17px) 0 0;        
         align-items: center;       
         width: 100%;
     }
 }
 
 .team__title {
-    padding-bottom: rem(80px);
-    color: $yellow;
     display: flex;
     align-items: center;
+    color: $yellow;    
     @include gagalin();
     font-size: rem(72px);
     line-height: 1;
+
+    @include tablets() {
+        font-size: rem(76px);        
+    }
 
     @include phones() {   
         font-size: rem(50px);        
     }
 }
 
+.team__list {
+    margin-top: rem(74px);
+
+    @include tablets() {
+        margin-top: rem(165px);        
+    }
+}
+
 .team__item {
+    margin-bottom: rem(31px);
     
     &.active {
-        .team__container {
-            height: auto;
+        .team__accordion {
+            height: rem(140px);
         }
         
         .team__name {
@@ -64,19 +76,20 @@
 }
 
 .team__name {
-    padding-top: rem(35px);
+    // padding-top: rem(35px);
     display: flex;
     align-items: center;
     @include gagalin();
     font-size: rem(14px);
     color: $white;
+    cursor: pointer;
 
     &::before {
         content: "";
         margin-right: rem(10px);
         width: 0;
         height: 0;
-        border: rem(8px) solid transparent;
+        border: rem(5px) solid transparent;
         border-top-color: $yellow;
         border-bottom: none;
     }
@@ -88,21 +101,30 @@
 
     @include tablets() {
         @include gagalin();
-        font-size: rem(24px);
+        font-size: rem(26px);
+    }
+}
+
+.team__accordion {
+    display: flex;
+    overflow: hidden;
+    height: 0;
+    transition: .5s;
+
+    @include tablets() {
+        display: flex;
+        text-align: center;
     }
 }
 
 .team__container {
-    margin-top: rem(17px);
+    padding: rem(13px) 0 rem(10px) rem(17px);
     display: flex;
-    overflow: hidden;
-    height: 0;
 
     @include tablets() {
-        display: flex;
-        flex-flow: column;
+        flex-direction: column;
         align-items: center;
-        text-align: center;
+        padding: rem(16px) 0 0 0;    
     }
 }
 
@@ -123,7 +145,7 @@
 }
 
 .team__about {
-    margin-left: rem(20px);
+    margin-left: rem(22px);
     display: flex;
     flex-direction: column;
     width: rem(223px);
@@ -141,7 +163,7 @@
     color: $white;
 
     @include tablets() {
-        padding-top: rem(20px);
+        padding-top: rem(15px);
     }
 }
 
@@ -151,5 +173,9 @@
     @include ubuntu(light);
     font-size: rem(14px);
     color: $white;
-    line-height: 1.7;
+    line-height: 1.8;
+
+    @include tablets() {
+        margin-top: rem(3px);
+    }
 }

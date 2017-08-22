@@ -16,11 +16,11 @@
 }
 
 .menu__title {
-    padding: rem(100px) 0 0 rem(90px);
+    padding: rem(88px) 0 0 rem(95px);
     font-size: rem(72px);
 
     @include tablets() {   
-        padding: rem(100px) 0 0 rem(25px);     
+        padding: rem(100px) 0 0 rem(9px);     
     }
 
     @include phones() {   
@@ -41,14 +41,15 @@
     display: flex;
     height: 100%;
 
-    // &.active .menu__accordeon {
-    //     display: block;
-    // }
+    &.active .menu__accordeon {
+        display: block;
+    }
 
-    // &.active .menu__subtitle {
-    //     bottom: rem(335px);
-    //     color: $yellow;
-    // }
+    &.active .menu__subtitle {
+        bottom: rem(130px);
+        color: $yellow;
+        transition: .5s;
+    }
 }
 
 .menu__container {
@@ -98,22 +99,26 @@
     }
 }
 
+.menu__subtitle_meat,
+.menu__subtitle_vegetarian,
+.menu__subtitle_dietary {
+    bottom: calc(50% - 23px);
+}
+
 .menu__subtitle_meat {
     position: absolute;
     left: rem(-92px);
-    bottom: rem(144px);
+    // bottom: calc(50% - 23px);
 }
 
 .menu__subtitle_vegetarian {
     position: absolute;
-    left: rem(-104px);
-    bottom: rem(158px);
+    left: rem(-107px);
 }
 
 .menu__subtitle_dietary {
     position: absolute;
-    left: rem(-77px);
-    bottom: rem(131px);
+    left: rem(-80px);
 }
 
 .menu__accordeon {

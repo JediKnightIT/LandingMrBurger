@@ -8,11 +8,23 @@
 
 .burgers__slider-left {
     position: absolute;
-    left: 0;
+    left: rem(-44px);
     transform: rotate(90deg);
+
+    @include tablets() {
+        left: 0;
+        bottom: 49%;        
+    } 
+}
+
+.burgers__slider-list {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
 }
 
 .burgers__assortment {
+    padding-bottom: rem(88px);
     display: flex;
     width: 100%;
 
@@ -25,20 +37,25 @@
 
 .burgers__container-left {
     position: relative;
+    margin-right: rem(29px);
+
+    @include tablets() {
+        margin: rem(22px) rem(12px) 0 0;        
+    } 
 }
 
 .burgers__composition {
     position: absolute;
-    margin-left: rem(50px);
     display: flex;
 
     @include tablets() {
-        margin-left: 0;
+        top: rem(-6px);
+        left: rem(-12px);
     }
 }
 
 .burgers__link {
-    padding: rem(10px) rem(22px);
+    padding: rem(10px) rem(23px);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -46,7 +63,6 @@
     border-radius: rem(5px);
     text-decoration: none;
     transition: .4s;  
-    
 
     &:hover {
         background-color: rgba($orange, 1);
@@ -55,7 +71,6 @@
 }
 
 .burgers__composition-text {
-    margin-top: rem(5px);
     @include gagalin();
     font-size: rem(14px);
     color: $white;
@@ -63,19 +78,42 @@
 }
 
 .burgers__list {
-    padding: rem(20px);
+    padding: rem(10px) rem(25px) rem(16px) rem(21px);
     background-color: rgba($white, .9);
     border-radius: rem(5px);
-    display: none; 
+    display: none;            
+}
+
+.burgers__link-close {
+    position: absolute;
+    right: 0;
 }
 
 .burgers__item {
     display: flex;
     align-items: center;
+    margin-top: rem(6px);
+}
+
+.burgers__item-icon {
+    margin-right: rem(24px);
+}
+
+.burgers__item-text {
+    margin-right: auto;
+    width: rem(70px);
+    @include ubuntu(medium);
+    font-size: rem(14px);
+}
+
+.burgers__item-weight {
+    margin-left: rem(57px);
+    @include ubuntu(light);
+    font-size: rem(14px);  
 }
 
 .burgers__img {
-    padding: rem(75px) 0 0 rem(30px);
+    padding: rem(75px) 0 rem(5px) 0;
 
     @include tablets() {
         padding: rem(75px) 0 0 0;
@@ -89,14 +127,14 @@
 
 .burgers__calories {
     position: absolute;
-    left: rem(50px);
+    left: 0;
     display: flex;
     flex-direction: column;
     opacity: .5;
 
     @include tablets() {
-        top: 0;
-        right: 0;
+        top: rem(-5px);
+        right: rem(-3px);
         left: inherit;
     }
 }
@@ -111,7 +149,7 @@
 
 .burgers__calories-number {
     position: absolute;
-    top: rem(25px);
+    top: rem(22px);
     left: rem(14px);
     font-size: rem(20px);
 }
@@ -123,7 +161,6 @@
 .burgers__container-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
 
     @include tablets() {
         align-items: center;
@@ -134,11 +171,12 @@
     @include gagalin();
     font-size: rem(72px);
     color: $white;
-    line-height: 1;
+    line-height: .9;
 
     @include tablets() {
-        padding: rem(40px) rem(100px) 0 rem(100px); 
+        padding: rem(40px) rem(119px) 0 rem(100px); 
         text-align: center;
+        letter-spacing: rem(2px);
     }
 
     @include phones() {
@@ -147,24 +185,29 @@
 }
 
 .burgers__text {
+    margin-top: rem(36px);
     @include ubuntu(light);
     font-size: rem(14px);
     color: $white;
     line-height: 1.7;
 
     @include tablets() {
-        padding: rem(30px) rem(30px) 0;
+        margin-top: 0;
+        padding: rem(25px) rem(65px) 0 rem(65px);
         text-align: center;
     }
 }
 
 .burgers__delivery {
-    @include tablets() {
-        margin-top: rem(45px);        
-    }
+    margin-top: rem(10px);
 
     @include tablets() {
-        margin-top: rem(15px);
+        margin-top: 0;
+        padding: rem(30px) rem(14px) rem(42px) 0;        
+    }
+
+    @include phones() {
+        // margin-top: rem(15px);
     }
 }
 
@@ -178,7 +221,11 @@
     margin-right: rem(20px);
     @include gagalin();
     font-size: rem(30px);
-    color: $orange; 
+    color: $orange;
+
+    @include tablets() {
+        margin-right: rem(31px);        
+    }
 }
 .burgers__slider-right {
     position: absolute;
@@ -186,6 +233,6 @@
     transform: rotate(-90deg);
 
     @include tablets() {
-        right: 0;        
+        right: rem(14px);        
     }
 }

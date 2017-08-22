@@ -1,5 +1,6 @@
 .delivery {
     position: relative;
+    padding: rem(67px) 0;
     background: url("../img/background/delivery_background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,7 +8,7 @@
 }
 
 .delivery__title {
-    margin-bottom: rem(60px);
+    // margin-bottom: rem(60px);
     @include gagalin();
     font-size: rem(72px);
     color: $yellow;
@@ -21,6 +22,7 @@
 }
 
 .delivery__form {
+    padding-top: rem(36px);
     display: flex;
 
     @include tablets() {
@@ -42,12 +44,20 @@
     } 
 }
 
+.delivery__form-left {
+    margin-right: rem(9px);
+
+    @include phones() {
+        margin-right: 0;        
+    }
+}
+
 .delivery__form-row {
     display: flex;
 }
 
 .delivery__label {
-    margin-left: rem(20px);
+    margin-right: rem(18px);
 
     @include phones() {
         &:first-child {
@@ -69,7 +79,7 @@
 }
 
 .delivery__form-title {
-    margin-top: rem(20px);
+    margin-top: rem(18px);
     @include ubuntu(light);
     font-size: rem(14px);
     color: $white;
@@ -94,7 +104,7 @@
 }
 
 .delivery__form-input {
-    height: rem(35px);
+    height: rem(20px);
 }
 
 .delivery__label-textarea {
@@ -102,7 +112,7 @@
 }
 
 .delivery__form-textarea {
-    height: rem(116px);
+    height: rem(111px);
     resize: none;
 }
 
@@ -118,7 +128,7 @@
 }
 
 .delivery__form-radio {
-    margin-top: rem(15px);
+    margin: rem(11px) 0 0 rem(-21px);
 
     @include phones() {
         margin-top: rem(35px);
@@ -170,7 +180,7 @@
 }
 
 .delivery__check {
-    margin-top: rem(24px);
+    margin-top: rem(23px);
 
     @include phones() {
         margin-top: rem(35px);
@@ -186,7 +196,7 @@
 }
 
 .delivery__check-fake {
-    margin: 0 rem(10px) 0 rem(20px);
+    margin: 0 rem(10px) 0 0;
     width: rem(15px);
     height: rem(15px);
     background-color: $white;
@@ -208,14 +218,14 @@
 }
 
 .delivery__send {
-    margin: rem(25px) 0 0 rem(241px);
+    margin: rem(23px) 0 rem(110px) rem(217px);
 
     @include tablets() {
-        margin-left: rem(-295px);
+        margin-left: rem(-335px);
     }
 
     @include phones() {
-        margin-left: rem(23px);
+        margin-left: rem(-5px);
     }
 }
 

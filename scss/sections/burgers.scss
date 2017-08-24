@@ -137,8 +137,8 @@
     }
 
     @include phones() {
-        padding: rem(85px) 0 0 rem(30px);
-        width: 90%;
+        padding: rem(85px) 0 0 rem(78px);
+        width: 85%;
     }
 }
 
@@ -225,7 +225,7 @@
 
     @include tablets() {
         margin-top: 0;
-        padding: rem(30px) rem(14px) rem(42px) 0;        
+        padding: 0 rem(14px) rem(42px) 0;        
     }
 }
 

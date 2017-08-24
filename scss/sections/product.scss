@@ -95,7 +95,6 @@
     }
 
     @include tablets() {
-        bottom: 4%;
-        left: calc(50% - 24px);    
+        bottom: 4%; 
     }
 }

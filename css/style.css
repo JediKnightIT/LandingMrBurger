@@ -342,8 +342,7 @@ p {
     transition: .3s; }
   @media screen and (max-width: 768px) {
     .product__link {
-      bottom: 4%;
-      left: calc(50% - 24px); } }
+      bottom: 4%; } }
 
 .header-hamburger__link {
   position: relative;
@@ -629,8 +628,8 @@ p {
       padding: 4.6875rem 0 0 0; } }
   @media screen and (max-width: 480px) {
     .burgers__img {
-      padding: 5.3125rem 0 0 1.875rem;
-      width: 90%; } }
+      padding: 5.3125rem 0 0 4.875rem;
+      width: 85%; } }
 
 .burgers__calories {
   position: absolute;
@@ -722,7 +721,7 @@ p {
   @media screen and (max-width: 768px) {
     .burgers__delivery {
       margin-top: 0;
-      padding: 1.875rem 0.875rem 2.625rem 0; } }
+      padding: 0 0.875rem 2.625rem 0; } }
 
 .burgers__price {
   font-family: 'Gagalin', Helvetica, sans-serif;
@@ -811,7 +810,7 @@ p {
   margin-top: 4.625rem; }
   @media screen and (max-width: 768px) {
     .team__list {
-      margin-top: 10.3125rem; } }
+      margin-top: 3.3125rem; } }
 
 .team__item {
   margin-bottom: 1.9375rem; }
@@ -1414,9 +1413,6 @@ p {
 
 .delivery__form-radio {
   margin: 0.6875rem 0 0 -1.3125rem; }
-  @media screen and (max-width: 480px) {
-    .delivery__form-radio {
-      margin-top: 2.1875rem; } }
 
 .delivery__control-choise {
   display: none; }
@@ -1458,9 +1454,6 @@ p {
 
 .delivery__check {
   margin-top: 1.4375rem; }
-  @media screen and (max-width: 480px) {
-    .delivery__check {
-      margin-top: 2.1875rem; } }
 
 .delivery__control-choise:checked + .delivery__check-fake::after {
   display: block; }

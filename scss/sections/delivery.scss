@@ -131,10 +131,6 @@
 
 .delivery__form-radio {
     margin: rem(11px) 0 0 rem(-21px);
-
-    @include phones() {
-        margin-top: rem(35px);
-    } 
 }
 
 .delivery__control-choise {
@@ -183,10 +179,6 @@
 
 .delivery__check {
     margin-top: rem(23px);
-
-    @include phones() {
-        margin-top: rem(35px);
-    } 
 }
 
 .delivery__control-choise:checked+.delivery__check-fake::after {

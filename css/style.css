@@ -94,7 +94,7 @@ p {
   position: relative;
   top: 0;
   height: 100%;
-  min-height: 650px;
+  min-height: 560px;
   -webkit-transition: -webkit-transform 1s;
   transition: -webkit-transform 1s;
   -o-transition: transform 1s;
@@ -588,7 +588,8 @@ p {
   padding: 0.625rem 1.5625rem 1rem 1.3125rem;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0.3125rem;
-  display: none; }
+  display: none;
+  z-index: 500; }
 
 .burgers__link-close {
   position: absolute;
@@ -697,6 +698,7 @@ p {
       letter-spacing: 0.125rem; } }
   @media screen and (max-width: 480px) {
     .burgers__name {
+      padding: 2.5rem 0;
       font-size: 3.125rem; } }
 
 .burgers__text {
@@ -711,6 +713,9 @@ p {
       margin-top: 0;
       padding: 1.5625rem 4.0625rem 0 4.0625rem;
       text-align: center; } }
+  @media screen and (max-width: 480px) {
+    .burgers__text {
+      padding: 0; } }
 
 .burgers__delivery {
   margin-top: 0.625rem; }

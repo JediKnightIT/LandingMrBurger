@@ -97,7 +97,8 @@
     padding: rem(10px) rem(25px) rem(16px) rem(21px);
     background-color: rgba($white, .9);
     border-radius: rem(5px);
-    display: none;            
+    display: none;
+    z-index: 500;   
 }
 
 .burgers__link-close {
@@ -196,6 +197,7 @@
     }
 
     @include phones() {
+        padding: rem(40px) 0;         
         font-size: rem(50px);
     }
 }
@@ -211,6 +213,10 @@
         margin-top: 0;
         padding: rem(25px) rem(65px) 0 rem(65px);
         text-align: center;
+    }
+
+    @include phones() {
+        padding: 0;
     }
 }
 

@@ -10,6 +10,7 @@
     position: absolute;
     left: rem(-44px);
     transform: rotate(90deg);
+    z-index: 500;
 
     @include tablets() {
         left: 0;
@@ -62,6 +63,10 @@
     @include tablets() {
         top: rem(-6px);
         left: rem(-12px);
+    }
+
+    @include phones() {
+        left: rem(4px);
     }
 }
 

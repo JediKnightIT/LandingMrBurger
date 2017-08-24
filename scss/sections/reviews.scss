@@ -58,6 +58,10 @@
     @include gagalin();
     font-size: rem(14px);
     color: $white;
+
+    @include phones() {   
+        font-size: rem(20px);        
+    }
 }
 
 .reviews__text,
@@ -107,7 +111,12 @@
     width: rem(461px);
     height: rem(270px);
     padding: rem(30px) rem(20px);
-    border-radius: rem(5px);    
+    border-radius: rem(5px);
+
+    @include phones() {   
+        width: rem(334px);
+        height: rem(340px);    
+    }
 }
 
 .reviews__popup-title {
@@ -119,6 +128,8 @@
 
 .reviews__popup-text {
     color: $dark;
+    text-align: left;
+    display: block;
 }
 
 .fancybox-close-small {
@@ -129,11 +140,19 @@
         color: rgba($orange, .6);
         transition: .5s;
         transform-origin: rem(15px) rem(15px);
+
+        @include phones() {   
+            transform-origin: rem(18px) rem(18px);     
+        }
     }
 
     &:hover::after {
         color: rgba($orange, 1);
         background-color: #fff;    
         transform: rotate(90deg);
+    }
+
+    &:focus:after {
+        outline: none;
     }
 }

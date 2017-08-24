@@ -155,7 +155,69 @@ $(document).ready(function () {
     
 });
 
+// Слайдер в секции бургеры
+$(function () {
 
+    var moveSlide = function (container, slideNumber) {
+        var 
+            items = container.find('.burgers__slider-item'),
+            activeSlide = items.filter('.active'),
+            reqItem = items.eq(slideNumber),
+            reqIndex = reqItem.index(),            
+            list = container.find('.burgers__slider-list'),
+            duration = 500;
+
+        if (reqItem.length) {
+            
+            list.animate ({
+                'right' : reqIndex * 100 + '%'
+            }, duration, function () {
+                activeSlide.removeClass('active');
+                reqItem.addClass('active');
+            });
+        }
+    }
+
+// вешаем обработчик на кнопки переключения слайдера
+    $('.burgers__slider-btn').on('click', function(e) {
+        e.preventDefault();
+
+        var $this = $(this),
+            container = $this.closest('.container'),
+            items = $('.burgers__slider-item', container),
+            activeItem = items.filter('.active'),
+            nextItem = activeItem.next();
+            prevItem = activeItem.prev();
+
+
+        if ($this.hasClass('burgers__slider-right')) {    //листаем вправо
+
+            if (nextItem.length) {
+                moveSlide(container, nextItem.index());
+
+            } 
+            
+            else {
+                moveSlide(container, items.first().index());
+
+            }
+            
+        } 
+        
+        else {    //листаем влево
+
+            if (prevItem.length) {
+                moveSlide(container, prevItem.index());
+
+            } 
+            
+            else {
+                moveSlide(container, items.last().index());
+
+            }
+        }
+    });
+});
 
 // Вертикальный аккордеон в секции команда
 $(function () {
@@ -172,7 +234,7 @@ $(function () {
 
 // Горизонтальный аккордеон в секции меню
 $(function () {
-    $('.menu__subtitle').on('click', function (e) {
+    $('.menu__item').on('click', function (e) {
     e.preventDefault();
 
     var elem = $(e.target),
@@ -183,10 +245,53 @@ $(function () {
     })
 })
 
+
 // Модальное окно в секции отзывы
 $(function() {
     $('[data-fancybox]').fancybox({
     });
 });
+
+
+// Форма для заказа в секции заказать
+
+var submitForm = function (ev) {
+    ev.preventDefault();
+    // console.log(ev);
+
+    var form = $(ev.target);
+        
+    var request = ajaxForm(form);
+
+    request.done(function(msg) {
+        var mes = msg.mes,
+            status = msg.status;
+        if (status === 'OK') {
+            form.append('<p class="success">' + mes + '</p>');
+        } else{
+            form.append('<p class="error">' + mes + '</p>');
+        }
+    });
+
+    request.fail(function(jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+    });
+}
+
+var ajaxForm = function (form) {
+
+    var url = form.attr('action'),
+        data = form.serialize();
+
+    return $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        dataType: 'JSON'
+    });
+
+}
+
+$('#order-form').on('submit', submitForm);
 
 

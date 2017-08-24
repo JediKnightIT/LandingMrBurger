@@ -24,14 +24,29 @@
                 <li>Улица: ' . $street . '</li>
                 <li>Дом: ' . $house . '</li>
                 <li>Корпус: ' . $housing . '</li>
-                <li>Этаж: ' . $floor . '</li>
+                <li>Квартира: ' . $flat . '</li>
+                <li>Этаж: ' . $floor . '</li>                
                 <li>Комментарий: ' . $message . '</li>
                 <li>Cпособ оплаты: ' . $pay . '</li>
-                <li></li>
-                <li></li>                
+                <li>Нужно ли перезванивать клиенту: ' . $distrub . '</li>                
             </ul>
         </body>
     </html>
     ';
 
-    echo $mail_message;
+    $headers = "From: Администратор сайта <garipov.niiaz@gmail.com>\r\n".
+    "MIME-Version: 1.0" . "\r\n" .
+    "Content-type: text/html; charset=UTF-8" . "\r\n";
+    
+    $mail = mail('garipov.niiaz@gmail.com', 'Заказ', $mail_message, $headers);
+    $data = [];
+    
+    if ($mail) {
+        $data['status'] = "OK";
+        $data['mes'] = "Письмо успешно отправлено";
+    }else{
+        $data['status'] = "NO";
+        $data['mes'] = "На сервере произошла ошибка";
+    }
+    echo json_encode($data);
+?>

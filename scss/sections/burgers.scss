@@ -13,14 +13,25 @@
 
     @include tablets() {
         left: 0;
-        bottom: 49%;        
+        bottom: 48.5%;        
     } 
 }
 
-.burgers__slider-list {
-    display: flex;
+.burgers__section {
+    position: absolute;
     width: 100%;
     overflow: hidden;
+}
+
+.burgers__slider-list {
+    position: relative;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.burgers__slider-item {
+    min-width: 100%;
 }
 
 .burgers__assortment {
@@ -204,10 +215,6 @@
     @include tablets() {
         margin-top: 0;
         padding: rem(30px) rem(14px) rem(42px) 0;        
-    }
-
-    @include phones() {
-        // margin-top: rem(15px);
     }
 }
 

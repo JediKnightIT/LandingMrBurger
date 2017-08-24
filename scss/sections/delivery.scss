@@ -24,15 +24,25 @@
 .delivery__form {
     padding-top: rem(36px);
     display: flex;
+    justify-content: center;
 
     @include tablets() {
+        padding: 0 20%;
         flex-wrap: wrap;
-        width: 70%;
     }
 
     @include phones() {
+        padding: 0;        
         width: 100%;        
     }
+}
+
+.delivery__form-left {
+    margin-right: 5%;
+
+    @include tablets() {
+        margin-right: 0;
+    } 
 }
 
 .delivery__form-left,
@@ -44,30 +54,17 @@
     } 
 }
 
-.delivery__form-left {
-    margin-right: rem(9px);
-
-    @include phones() {
-        margin-right: 0;        
-    }
-}
-
 .delivery__form-row {
     display: flex;
 }
 
-.delivery__label {
-    margin-right: rem(18px);
-
-    @include phones() {
-        &:first-child {
-            margin-left: 0;
-        }
-    }
-}
-
 .delivery__label-first {
+    margin-right: rem(18px);
     width: 50%;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .delivery__label-second {
@@ -75,7 +72,12 @@
 }
 
 .delivery__label-third {
+    margin-right: rem(18px);    
     width: 25%;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .delivery__form-title {
@@ -218,25 +220,24 @@
 }
 
 .delivery__send {
-    margin: rem(23px) 0 rem(110px) rem(217px);
-
-    @include tablets() {
-        margin-left: rem(-335px);
-    }
+    margin-top: rem(23px);
+    text-align: left;   
 
     @include phones() {
-        margin-left: rem(-5px);
+        text-align: center;
     }
 }
 
 .delivery__btn {
     min-width: rem(98px);
     padding: rem(10px) rem(15px);
-    color: #fff;
     text-decoration: none;
     @include ubuntu(medium);
     font-size: rem(13px);
     text-transform: uppercase;
+    color: #fff;
+    background-color: transparent;
+    border: none;    
     border-radius: rem(5px);
     transition: .5s;
 

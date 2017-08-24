@@ -9,6 +9,10 @@
     @include tablets() {
         padding: rem(104px) 0 rem(393px) 0;
     }
+
+    @include phones() {
+        padding: 0;        
+    }
 }
 
 .advantages__title {

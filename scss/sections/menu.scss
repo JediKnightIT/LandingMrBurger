@@ -127,6 +127,10 @@
     width: rem(540px);
     min-height: rem(650px);
     background-color: rgba($dark, 0.93);
+
+    @include tablets() {   
+        width: 100%;     
+    }
 }
 
 .menu__text {

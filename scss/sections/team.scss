@@ -17,10 +17,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: rgba($dark, 0.93);
+    background-color: rgba(#343739, 0.93);
     
-    @include tablets() {
-        // padding: rem(245px) rem(17px) 0 0;        
+    @include tablets() {   
         align-items: center;       
         width: 100%;
     }
@@ -56,7 +55,11 @@
     
     &.active {
         .team__accordion {
-            height: rem(140px);
+            height: rem(126px);
+
+            @include tablets() {
+                height: rem(220px);
+            }                
         }
         
         .team__name {

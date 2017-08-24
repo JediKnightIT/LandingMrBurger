@@ -19,6 +19,10 @@
         margin-top:rem(125px);        
         flex-flow: row wrap;
     }
+
+    @include phones() {
+        margin-top:rem(80px);        
+    }
 }
 
 .product__burger,

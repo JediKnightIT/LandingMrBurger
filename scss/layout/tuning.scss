@@ -26,6 +26,10 @@
     @include tablets() {
         min-height: auto;
     }
+
+    @include phones() {
+        min-height: auto;
+    }
 }
 
 .container {

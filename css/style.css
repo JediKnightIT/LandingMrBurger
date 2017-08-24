@@ -116,6 +116,9 @@ p {
   @media screen and (max-width: 768px) {
     .section {
       min-height: auto; } }
+  @media screen and (max-width: 480px) {
+    .section {
+      min-height: auto; } }
 
 .container {
   position: relative;
@@ -1013,7 +1016,6 @@ p {
   .menu__item.active .menu__accordeon {
     display: block; }
   .menu__item.active .menu__subtitle {
-    bottom: 8.125rem;
     color: #f9b43b;
     -webkit-transition: .5s;
     -o-transition: .5s;
@@ -1029,6 +1031,9 @@ p {
     display: block;
     height: 100%;
     background: rgba(0, 0, 0, 0.7); }
+  @media screen and (max-width: 480px) {
+    .menu__container {
+      width: 3.75rem; } }
 
 .menu__container_meat {
   background-image: url("../img/menu/meat.jpg");
@@ -1049,6 +1054,10 @@ p {
   background-size: cover; }
 
 .menu__subtitle {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1063,23 +1072,12 @@ p {
     -webkit-transition: .4s;
     -o-transition: .4s;
     transition: .4s; }
-
-.menu__subtitle_meat,
-.menu__subtitle_vegetarian,
-.menu__subtitle_dietary {
-  bottom: calc(50% - 23px); }
-
-.menu__subtitle_meat {
-  position: absolute;
-  left: -5.75rem; }
-
-.menu__subtitle_vegetarian {
-  position: absolute;
-  left: -6.6875rem; }
-
-.menu__subtitle_dietary {
-  position: absolute;
-  left: -5rem; }
+  @media screen and (max-width: 768px) {
+    .menu__subtitle {
+      top: 90%; } }
+  @media screen and (max-width: 480px) {
+    .menu__subtitle {
+      font-size: 1.875rem; } }
 
 .menu__accordeon {
   padding: 3.75rem 2.3125rem 0 2.1875rem;
@@ -1089,6 +1087,11 @@ p {
   background-color: rgba(47, 50, 52, 0.93); }
   @media screen and (max-width: 768px) {
     .menu__accordeon {
+      padding: 3.75rem 1.875rem;
+      width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .menu__accordeon {
+      padding: 1.5625rem 0.9375rem;
       width: 100%; } }
 
 .menu__text {
@@ -1097,7 +1100,7 @@ p {
   font-weight: 300;
   font-size: 0.875rem;
   color: #fff;
-  line-height: 2; }
+  line-height: 1.8; }
 
 .reviews {
   background-color: #2f3234;

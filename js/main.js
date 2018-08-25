@@ -106,7 +106,7 @@ $(function () {
     $('[data-scroll]').on('click', function(e) {
         e.preventDefault();
 
-        var block = $(e.target);
+        var block = $(e.target);    
 
         performTransition(block.attr('data-scroll'))
     });
@@ -134,6 +134,12 @@ $(document).ready(function () {
 
     // Закрытие полноэкранного меню
     $('.fullscreen-menu__link-close').on('click', function (e) {
+        e.preventDefault();
+
+        $('.fullscreen-menu').hide();
+    });
+
+    $('.fullscreen-menu__link').on('click', function (e) {
         e.preventDefault();
 
         $('.fullscreen-menu').hide();

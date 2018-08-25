@@ -1018,12 +1018,12 @@ p {
   display: flex;
   height: 100%; }
   .menu__item.active .menu__accordeon {
-    display: block; }
+    display: block;}
   .menu__item.active .menu__subtitle {
     color: #f9b43b;
     -webkit-transition: .5s;
     -o-transition: .5s;
-    transition: .5s; }
+    transition: .5s; }}
 
 .menu__container {
   position: relative;
@@ -1768,13 +1768,14 @@ p {
       background-color: rgba(47, 50, 52, 0.99);
       z-index: 100; } }
 
-.fullscreen-menu__img {
-  padding: 10px 20px; }
+.fullscreen-menu__logo {
+  display: inline-block;
+  padding: 5px 13px; }
 
 .fullscreen-menu__link-close {
   position: absolute;
-  top: 1.875rem;
-  right: 1.25rem;
+  top: 2.5rem;
+  right: 0.8rem;
   width: 2rem;
   height: 1.25rem; }
 
